@@ -18,7 +18,7 @@
 				<span class="text-xs pr-2">GAME HACKING</span>
 				<span class="text-xs border-l px-2">DEBUGGING</span>
 				<span class="text-xs border-l px-2">ASSEMBLY (x64/x86)</span>
-				<span class="text-xs border-l px-2 font-bold">MENTORING</span>
+				<span class="text-xs border-l px-2 font-bold">MENTOR</span>
 			</div>
 		</div>
 		<div class="text-plat grid">
