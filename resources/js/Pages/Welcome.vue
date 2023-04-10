@@ -13,12 +13,12 @@
 			</div>
 		</div>
 		<div class="text-plat grid my-4">
-			<span class="uppercase text-2xl font-bold">Reverse Engineering</span>
+			<span class="uppercase text-2xl font-bold">Reverse Engineer</span>
 			<div class="self-center">
-				<span class="text-xs pr-2">GAME HACKING</span>
-				<span class="text-xs border-l px-2">DEBUGGING</span>
-				<span class="text-xs border-l px-2">ASSEMBLY (x64/x86)</span>
-				<span class="text-xs border-l px-2 font-bold">MENTOR</span>
+				<span class="text-xs pr-2">C++</span>
+				<span class="text-xs border-l px-2">COMP. ENG. TECHNOLOGIST</span>
+				<span class="text-xs border-l px-2">ASSEMBLY (x64/x86) & DEBUGGING</span>
+				<span class="text-xs border-l px-2 font-bold">MENTORSHIP</span>
 			</div>
 		</div>
 		<div class="text-plat grid">
@@ -30,7 +30,7 @@
 				<span class="text-xs border-l px-2 font-bold">150M+ PLAYS</span>
 			</div>
 		</div>
-		<div class="flex flex-col text-tomato mt-8">
+		<div class="flex flex-col text-tomato mt-8 gap-2 text-sm">
 			<a class="hover:text-red-400" href="https://github.com/striderwhite" target="_blank">
 				GITHUB #1
 			</a>
@@ -42,6 +42,9 @@
 			</a>
 			<a class="hover:text-red-400" href="https://open.spotify.com/artist/3bVGm4gbJWtaVmatdJHEUB" target="_blank">
 				SPOTIFY
+			</a>
+			<a  class="hover:text-red-400" href="email:strider@striderwhite.com" target="_blank">
+				STRIDER@STRIDERWHITE.COM
 			</a>
 		</div>
     </main>
