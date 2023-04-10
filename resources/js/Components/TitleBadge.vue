@@ -1,20 +1,20 @@
 <template>
     <div>
-        <span class="bg-red text-white px-2 text-2xl">
+        <span class="bg-highlight px-6 py-2 z-10 text-plat font-black tracking-widest">
             {{ title }}
         </span>
     </div>
 </template>
 
-  <script>
-  import { defineComponent } from 'vue'
+<script>
+import { defineComponent } from "vue";
 
-  export default defineComponent({
+export default defineComponent({
     props: {
-      title: {
-        type: String,
-        required: true
-      }
-    }
-  })
-  </script>
+        title: {
+            type: String,
+            required: true,
+        },
+    },
+});
+</script>

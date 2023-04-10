@@ -12,14 +12,16 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Nunito', 'Orbitron', ...defaultTheme.fontFamily.sans],
+                sans: ['Chivo', 'Nunito', ...defaultTheme.fontFamily.sans],
             },
+            // https://coolors.co/353535-3c6e71-ffffff-d9d9d9-284b63
             colors: {
-                'red': '#f06449',
-                'purple': '#7f2982',
-                'black': '#16001e',
-                'beige': '#f1dabf',
-                'white': '#fffbff',
+                primary: "#353535",
+                highlight: "#3c6e71",
+                white: "#ffffff",
+                plat: "#d9d9d9",
+                dye: "#284b63",
+                tomato: "#FE5E41"
               },
         },
     },
