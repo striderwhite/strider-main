@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
             [
                 'email' => 'strider@striderwhite.com',
                 'name' => 'Strider',
-                'password' => env('PASSWORD_SEED')
+                'password' => bcrypt(env('PASSWORD_SEED'))
             ]
         );
 
