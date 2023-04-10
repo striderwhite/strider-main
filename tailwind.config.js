@@ -12,8 +12,15 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                sans: ['Nunito', 'Orbitron', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                'red': '#f06449',
+                'purple': '#7f2982',
+                'black': '#16001e',
+                'beige': '#f1dabf',
+                'white': '#fffbff',
+              },
         },
     },
 
