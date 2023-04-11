@@ -15,10 +15,9 @@
 		<div class="text-plat grid my-4">
 			<span class="uppercase text-2xl font-bold">Reverse Engineer</span>
 			<div class="self-center">
-				<span class="text-xs pr-2">C++</span>
-				<span class="text-xs border-l px-2">COMP. ENG. TECHNOLOGIST</span>
-				<span class="text-xs border-l px-2">ASSEMBLY (x64/x86) & DEBUGGING</span>
-				<span class="text-xs border-l px-2 font-bold">MENTORSHIP</span>
+				<span class="text-xs pr-2">COMP. ENG. TECHNOLOGIST</span>
+				<span class="text-xs border-l px-2">SOFTWARE ANALYSIS</span>
+				<span class="text-xs border-l px-2 font-bold">C++ & ASSEMBLY (x64/x86)</span>
 			</div>
 		</div>
 		<div class="text-plat grid">
@@ -43,7 +42,7 @@
 			<a class="hover:text-red-400" href="https://open.spotify.com/artist/3bVGm4gbJWtaVmatdJHEUB" target="_blank">
 				SPOTIFY
 			</a>
-			<a  class="hover:text-red-400" href="email:strider@striderwhite.com" target="_blank">
+			<a  class="hover:text-red-400" href="mailto:strider@striderwhite.com" target="_blank">
 				STRIDER@STRIDERWHITE.COM
 			</a>
 		</div>
