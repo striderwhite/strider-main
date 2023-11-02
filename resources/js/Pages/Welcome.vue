@@ -8,7 +8,7 @@
             <img src="storage/images/programmer-keyboard.webp" alt="Software developer's keyboard">
         </div>
         <div class="_portrait">
-            <img src="storage/images/strider-white-software-developer.webp" alt="Strider White, website and software developer">
+            <img src="storage/images/strider-white-software-developer.webp" alt="Strider White, web application and software developer">
         </div>
         <div class="dark-bg">
             <div class="_socials">
@@ -20,11 +20,11 @@
         </div>
     </div>
     <div class="content">
-        <p class="_tag">Software & website developer</p>
+        <p class="_tag">Software & web application developer</p>
         <h1>Strider White.</h1>
         <p>Hey! Since 2017, I've been a professional software developer. While my technical background is in computer engineering, I have become an expert in Web Applications, Databases, and APIs. Fuelled by a passion for knowledge and problem solving, I am always striving to grow and excel. </p>
         <p>Currently I lead a team of developers at Fabled Solutions where we create custom web applications. </p>
-        <p>Outside of programming you can find me mixing & mastering music, soldering various electronics, and reverse software engineering.</p>
+        <p>Outside of programming you can find me mixing & mastering music, soldering various electronics, and reverse engineering software.</p>
         <div class="_btn-container">
             <a href="mailto:strider@striderwhite.com" class="btn btn-primary">Contact Me</a>
         </div>
