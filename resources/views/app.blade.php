@@ -2,25 +2,27 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;900&family=Work+Sans&display=swap" rel="stylesheet">
 
-    <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700;800;900&display=swap">
+    <meta
+    name="description"
+    content="Edmonton-based software developer and website developer. Available for hire for software projects. Contact me to chat!"
+    />
 
-    <!-- Scripts -->
+    <meta name="robots" content="index,follow" />
+    <title>Strider White | Software Developer</title>
+        <!-- Scripts -->
     @routes
     @vite('resources/js/app.js')
     @inertiaHead
 </head>
 
-<body class="font-sans antialiased bg-primary">
+<body class="font-sans antialiased">
     @inertia
 </body>
 
