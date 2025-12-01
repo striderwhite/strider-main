@@ -5,17 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;900&family=Work+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RWEREZXJET"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RWEREZXJET');
+    </script>
 
     <meta
     name="description"
-    content="Edmonton-based software developer and website developer. Available for hire for software projects. Contact me to chat!"
+    content="Enterprise-quality custom software development, AI automation, and systems integration. Nearly a decade of experience building scalable solutions at competitive rates—no boutique agency markup."
     />
 
     <meta name="robots" content="index,follow" />
-    <title>Strider White | Software Developer</title>
+    <title>Custom Software Development | Strider White</title>
         <!-- Scripts -->
     @routes
     @vite('resources/js/app.js')

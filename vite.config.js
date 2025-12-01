@@ -4,6 +4,12 @@ import vue from '@vitejs/plugin-vue';
 import copy from 'rollup-plugin-copy';
 
 export default defineConfig({
+    server: {
+        host: '0.0.0.0',
+        hmr: {
+            host: 'local.strider.test',
+        },
+    },
     plugins: [
         laravel({
             input: 'resources/js/app.js',
@@ -19,7 +25,7 @@ export default defineConfig({
         }),
         copy({
             targets: [
-              { src: 'resources/images/*', dest: 'storage/app/public/images' },
+              { src: 'resources/images/*', dest: 'storage/images' },
             ],
           }),
     ],
