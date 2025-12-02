@@ -23,14 +23,13 @@
 
     <meta name="robots" content="index,follow" />
     <title>Custom Software Development | Strider White</title>
-        <!-- Scripts -->
-    @routes
-    @vite('resources/js/app.js')
-    @inertiaHead
+      <!-- Vite React entry -->
+      @viteReactRefresh
+      @vite('resources/js/app.jsx')
 </head>
 
 <body class="font-sans antialiased">
-    @inertia
+    <div id="app"></div>
 </body>
 
 </html>
