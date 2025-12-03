@@ -7,33 +7,33 @@ import { Icon } from "@iconify/react";
 const ProjectsDropdown = ({ isOpen, onMouseEnter, onMouseLeave }) => {
     return (
         <motion.div
-            className="fixed left-0 right-0 top-[64px] w-full h-[calc(100vh-64px)] bg-red-200 z-40"
+            className="fixed inset-x-0 top-[64px] bottom-0 bg-gradient-to-b from-[#030a1b]/5 via-[#030a1b] to-[#030a1b] backdrop-blur-xl z-40"
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
             initial={{ opacity: 0 }}
             animate={isOpen ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
         >
-            <div className="w-full flex flex-col items-center py-8 h-full">
-                <h2 className="text-2xl font-bold mb-6">Projects</h2>
-                <div className="flex flex-col space-y-4 flex-1 justify-center">
+            <div className="w-full max-w-[1040px] mx-auto flex flex-col py-8 h-full">
+                <div className="flex flex-col space-y-6 lg:space-y-12 h-1/2 justify-center md:px-10">
+                    <h2 className="text-slate-400 font-2xl">Featured Projects</h2>
                     <Link
                         to="#"
-                        className="text-lg hover:text-blue-600 transition"
+                        className="text-slate-400 lg:text-5xl hover:text-primary transition"
                     >
-                        Project One
+                        Condo Doc Review
                     </Link>
                     <Link
                         to="#"
-                        className="text-lg hover:text-blue-600 transition"
+                        className="text-slate-400 lg:text-5xl hover:text-primary transition"
                     >
-                        Project Two
+                        DSLLP Minute Book
                     </Link>
                     <Link
                         to="#"
-                        className="text-lg hover:text-blue-600 transition"
+                        className="text-slate-400 lg:text-5xl hover:text-primary transition"
                     >
-                        Project Three
+                        Logistic Software Solutions
                     </Link>
                 </div>
             </div>
@@ -72,31 +72,18 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="w-full fixed top-0 left-0 z-30">
-                <div className="max-w-[1600px] mx-auto px-4 flex items-center justify-between h-16">
+            <nav className="w-full fixed top-0 left-0 z-30 text-slate-300">
+                <div className="max-w-[1040px] mx-auto px-4 flex items-center justify-between h-16">
                     {/* nav links desktop */}
-                    <div className="hidden md:flex w-1/3 items-center justify-start space-x-6">
-
+                    <div className="hidden md:flex flex-1 items-center justify-start space-x-8">
                         <div className="relative" onMouseEnter={openProjects}>
-                            <button className="hover:text-blue-600 transition focus:outline-none">
+                            <button className="hover:text-blue-600 transition focus:outline-none text-lg font-bold">
                                 Projects
                             </button>
                         </div>
-                        <AnimatePresence>
-                            {projectsVisible && (
-                                <ProjectsDropdown
-                                    key="projects-dropdown"
-                                    isOpen={projectsOpen}
-                                    onMouseEnter={openProjects}
-                                    onMouseLeave={closeProjects}
-                                    className="z-50 bg-green-900"
-                                />
-                            )}
-                        </AnimatePresence>
-
                         <Link
                             to="/about"
-                            className="hover:text-blue-600 transition"
+                            className="hover:text-blue-600 transition text-lg font-bold"
                             onMouseEnter={closeProjects}
                         >
                             About
@@ -104,12 +91,11 @@ export default function Navbar() {
 
                         <Link
                             to="/contact"
-                            className="hover:text-blue-600 transition"
+                            className="hover:text-blue-600 transition text-lg font-bold"
                             onMouseEnter={closeProjects}
                         >
                             Contact
                         </Link>
-
                     </div>
 
                     {/* logo */}
@@ -117,9 +103,9 @@ export default function Navbar() {
                     <div className="md:w-1/3 justify-center flex">
                         <Link
                             to="/"
-                            className="text-xl font-bold text-gray-900"
+                            className="text-lg font-bold"
                         >
-                            Strider
+                            StriderWhite
                         </Link>
                     </div>
 
@@ -128,14 +114,14 @@ export default function Navbar() {
                         <a
                             href="https://www.linkedin.com/in/striderwhite/"
                             target="_blank"
-                            className="hover:text-blue-600 transition"
+                            className="text-slate-300 hover:text-blue-600 transition"
                         >
                             <Icon icon="mdi:linkedin" width="24" height="24" />
                         </a>
                         <a
                             href="https://github.com/striderwhite"
                             target="_blank"
-                            className="hover:text-blue-600 transition"
+                            className="text-slate-300 hover:text-blue-600 transition"
                         >
                             <Icon icon="mdi:github" width="24" height="24" />
                         </a>
@@ -143,7 +129,7 @@ export default function Navbar() {
 
                     {/* mobile menu button, hidden in desktop */}
                     <button
-                        className="md:hidden text-2xl text-gray-700 focus:outline-none"
+                        className="md:hidden text-2xl text-slate-300 focus:outline-none"
                         onClick={() => setMobileOpen(!mobileOpen)}
                         aria-label="Open menu"
                     >
@@ -151,85 +137,106 @@ export default function Navbar() {
                     </button>
                 </div>
 
+                <AnimatePresence>
+                    {projectsVisible && (
+                        <ProjectsDropdown
+                            key="projects-dropdown"
+                            isOpen={projectsOpen}
+                            onMouseEnter={openProjects}
+                            onMouseLeave={closeProjects}
+                            className="z-50"
+                        />
+                    )}
+                </AnimatePresence>
+
                 {/* nav links mobile */}
                 <AnimatePresence>
-                {mobileOpen && (
-                    <motion.div
-                        key="mobile-menu"
-                        className="md:hidden fixed inset-0 w-full h-full z-40 px-4 pt-20 pb-4 flex flex-col space-y-2 bg-white"
-                        initial={{ y: -40, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        exit={{ y: -40, opacity: 0 }}
-                        transition={{ duration: 0.25, ease: "easeOut" }}
-                    >
-                        <button
-                            className="absolute top-4 right-3 text-3xl focus:outline-none"
-                            onClick={() => setMobileOpen(false)}
-                            aria-label="Close menu"
+                    {mobileOpen && (
+                        <motion.div
+                            key="mobile-menu"
+                            className="md:hidden fixed inset-0 w-full h-full z-40 px-4 pt-20 pb-4 flex flex-col space-y-2 bg-gradient-to-b from-[#030a1b]/5 via-[#030a1b] to-[#030a1b] backdrop-blur-xl text-slate-300"
+                            initial={{ y: -40, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: -40, opacity: 0 }}
+                            transition={{ duration: 0.25, ease: "easeOut" }}
                         >
-                            <Icon icon="mdi:close" width="32" height="32" />
-                        </button>
+                            <button
+                                className="absolute top-4 right-3 text-3xl focus:outline-none"
+                                onClick={() => setMobileOpen(false)}
+                                aria-label="Close menu"
+                            >
+                                <Icon icon="mdi:close" width="32" height="32" />
+                            </button>
 
-                        <Link
-                            to="/"
-                            className="py-2"
-                            onClick={() => setMobileOpen(false)}
-                        >
-                            Home
-                        </Link>
+                            <Link
+                                to="/"
+                                className="py-2 text-2xl font-bold text-slate-300"
+                                onClick={() => setMobileOpen(false)}
+                            >
+                                Home
+                            </Link>
 
-                        <details>
-                            <summary className="py-2 cursor-pointer">
-                                Projects
-                            </summary>
-                            <div className="pl-4 flex flex-col space-y-1">
-                                <Link to="#" className="py-1">
-                                    Project One
-                                </Link>
-                                <Link to="#" className="py-1">
-                                    Project Two
-                                </Link>
-                                <Link to="#" className="py-1">
-                                    Project Three
-                                </Link>
+                            <details>
+                                <summary className="py-2 cursor-pointer text-2xl font-bold">
+                                    Projects
+                                </summary>
+                                <div className="pl-4 flex flex-col space-y-1">
+                                    <h2 className="text-slate-300 font-xs">Featured Projects</h2>
+                                    <Link to="#" className="py-1 text-lg text-slate-300">
+                                        Condo Doc Review
+                                    </Link>
+                                    <Link to="#" className="py-1 text-lg text-slate-300">
+                                        DSLLP Minute Book
+                                    </Link>
+                                    <Link to="#" className="py-1 text-lg text-slate-300">
+                                         Logistic Software Solutions
+                                    </Link>
+                                </div>
+                            </details>
+
+                            <Link
+                                to="/about"
+                                className="py-2 text-2xl font-bold text-slate-300"
+                                onClick={() => setMobileOpen(false)}
+                            >
+                                About
+                            </Link>
+                            <Link
+                                to="/contact"
+                                className="py-2 text-2xl font-bold text-slate-300"
+                                onClick={() => setMobileOpen(false)}
+                            >
+                                Contact
+                            </Link>
+
+                            {/* mobile socials */}
+                            <div className="flex space-x-4 pt-12">
+                                <a
+                                    href="https://www.linkedin.com/in/striderwhite/"
+                                    target="_blank"
+                                    className="hover:text-blue-600 transition"
+                                >
+                                    <Icon
+                                        icon="mdi:linkedin"
+                                        width="24"
+                                        height="24"
+                                    />
+                                </a>
+                                <a
+                                    href="https://github.com/striderwhite"
+                                    target="_blank"
+                                    className="hover:text-blue-600 transition"
+                                >
+                                    <Icon
+                                        icon="mdi:github"
+                                        width="24"
+                                        height="24"
+                                    />
+                                </a>
                             </div>
-                        </details>
-
-                        <Link
-                            to="/about"
-                            className="py-2"
-                            onClick={() => setMobileOpen(false)}
-                        >
-                            About
-                        </Link>
-                        <Link
-                            to="/contact"
-                            className="py-2"
-                            onClick={() => setMobileOpen(false)}
-                        >
-                            Contact
-                        </Link>
-
-                    {/* mobile socials */}
-                    <div className="flex space-x-4">
-                        <a
-                            href="https://www.linkedin.com/in/striderwhite/"
-                            target="_blank"
-                            className="hover:text-blue-600 transition"
-                        >
-                            <Icon icon="mdi:linkedin" width="24" height="24" />
-                        </a>
-                        <a
-                            href="https://github.com/striderwhite"
-                            target="_blank"
-                            className="hover:text-blue-600 transition"
-                        >
-                            <Icon icon="mdi:github" width="24" height="24" />
-                        </a>
-                    </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </nav>
         </>
     );
