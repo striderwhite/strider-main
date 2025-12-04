@@ -69,46 +69,49 @@ export default function NotificationTicker(){
         y.set(next);
     });
 
-    return (
-        <div ref={wrapperRef} className="relative h-40 overflow-hidden">
-            <motion.div
-                style={{ y }}
-                className="absolute inset-0 flex flex-col gap-2"
-            >
-                {/* First list (measured) */}
-                <div ref={listRef}>
-                    {items.map((item, idx) => (
-                        <div
-                            key={`a-${idx}`}
-                            className="flex items-center mt-2 gap-3 rounded-2xl bg-slate-800 px-3 py-2 text-xs"
-                        >
-                            <div
-                                className={`flex h-7 w-7 items-center justify-center rounded-full ${item.color} text-slate-100`}
-                            >
-                                <Icon icon={item.icon} width={18} height={18} />
-                            </div>
-                            <span className="text-slate-200">{item.text}</span>
-                        </div>
-                    ))}
-                </div>
+return (
+    <div ref={wrapperRef} className="relative h-40 overflow-hidden">
 
-                {/* Second list for seamless wrap */}
-                <div aria-hidden="true">
-                    {items.map((item, idx) => (
+        {/* === Scroller === */}
+        <motion.div
+            style={{ y }}
+            className="absolute inset-0 flex flex-col gap-2 z-10"
+        >
+            {/* First list */}
+            <div ref={listRef}>
+                {items.map((item, idx) => (
+                    <div
+                        key={`a-${idx}`}
+                        className="flex items-center mt-2 gap-3 rounded-2xl bg-slate-800 px-3 py-2 text-xs"
+                    >
                         <div
-                            key={`b-${idx}`}
-                            className="flex items-center mt-2 gap-3 rounded-2xl bg-slate-800 px-3 py-2 text-xs"
+                            className={`flex h-7 w-7 items-center justify-center rounded-full ${item.color} text-slate-100`}
                         >
-                            <div
-                                className={`flex h-7 w-7 items-center justify-center rounded-full ${item.color} text-white`}
-                            >
-                                <Icon icon={item.icon} width={18} height={18} />
-                            </div>
-                            <span className="text-gray-200">{item.text}</span>
+                            <Icon icon={item.icon} width={18} height={18} />
                         </div>
-                    ))}
-                </div>
-            </motion.div>
-        </div>
-    );
+                        <span className="text-slate-200">{item.text}</span>
+                    </div>
+                ))}
+            </div>
+
+            {/* Duplicate for infinite loop */}
+            <div aria-hidden="true">
+                {items.map((item, idx) => (
+                    <div
+                        key={`b-${idx}`}
+                        className="flex items-center mt-2 gap-3 rounded-2xl bg-slate-800 px-3 py-2 text-xs"
+                    >
+                        <div
+                            className={`flex h-7 w-7 items-center justify-center rounded-full ${item.color} text-slate-100`}
+                        >
+                            <Icon icon={item.icon} width={18} height={18} />
+                        </div>
+                        <span className="text-slate-200">{item.text}</span>
+                    </div>
+                ))}
+            </div>
+        </motion.div>
+    </div>
+);
+
 };

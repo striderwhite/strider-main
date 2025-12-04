@@ -6,7 +6,7 @@ export default function ModernizingBar({
   return (
     <div className="w-full max-w-sm space-y-2">
       {/* Label + status */}
-      <div className="flex items-center justify-between text-[11px] text-slate-300">
+      <div className="flex items-center justify-between text-sm text-slate-300">
         <span>{label}</span>
         <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
           in progress
