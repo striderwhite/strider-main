@@ -72,18 +72,18 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="w-full fixed top-0 left-0 z-30 text-slate-300">
+            <nav className="w-full fixed top-0 left-0 z-30 text-slate-300 bg-transparent backdrop-blur-lg">
                 <div className="max-w-[1040px] mx-auto px-4 flex items-center justify-between h-16">
                     {/* nav links desktop */}
                     <div className="hidden md:flex flex-1 items-center justify-start space-x-8">
                         <div className="relative" onMouseEnter={openProjects}>
-                            <button className="hover:text-blue-600 transition focus:outline-none text-lg font-bold">
+                            <button className="hover:text-blue-600 transition focus:outline-none text-lg">
                                 Projects
                             </button>
                         </div>
                         <Link
                             to="/about"
-                            className="hover:text-blue-600 transition text-lg font-bold"
+                            className="hover:text-blue-600 transition text-lg"
                             onMouseEnter={closeProjects}
                         >
                             About
@@ -91,7 +91,7 @@ export default function Navbar() {
 
                         <Link
                             to="/contact"
-                            className="hover:text-blue-600 transition text-lg font-bold"
+                            className="hover:text-blue-600 transition text-lg"
                             onMouseEnter={closeProjects}
                         >
                             Contact

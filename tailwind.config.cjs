@@ -23,6 +23,7 @@ module.exports = {
 
                 // Primary
                 primary: "#3566ee", // med blue color
+                dark: "#111a32",
 
                 // Accents
                 accent: "#22d3ee",
