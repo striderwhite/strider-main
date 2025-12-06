@@ -7,7 +7,7 @@ import { Icon } from "@iconify/react";
 const ProjectsDropdown = ({ isOpen, onMouseEnter, onMouseLeave }) => {
     return (
         <motion.div
-            className="fixed inset-x-0 top-[64px] bottom-0 bg-gradient-to-b from-[#030a1b]/5 via-[#030a1b] to-[#030a1b] backdrop-blur-xl z-40"
+            className="fixed inset-x-0 top-[64px] bottom-0 bg-gradient-to-b from-[#030a1b]/5 via-[#030a1b] to-[#030a1b] backdrop-blur-3xl z-40"
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
             initial={{ opacity: 0 }}
@@ -16,22 +16,22 @@ const ProjectsDropdown = ({ isOpen, onMouseEnter, onMouseLeave }) => {
         >
             <div className="w-full max-w-[1040px] mx-auto flex flex-col py-8 h-full">
                 <div className="flex flex-col space-y-6 lg:space-y-12 h-1/2 justify-center md:px-10">
-                    <h2 className="text-slate-400 font-2xl">Featured Projects</h2>
+                    <h3 className="text-slate-400 font-2xl">Featured Projects</h3>
                     <Link
                         to="#"
-                        className="text-slate-400 lg:text-5xl hover:text-primary transition"
+                        className="text-slate-300 lg:text-5xl hover:text-primary transition"
                     >
                         Condo Doc Review
                     </Link>
                     <Link
                         to="#"
-                        className="text-slate-400 lg:text-5xl hover:text-primary transition"
+                        className="text-slate-300 lg:text-5xl hover:text-primary transition"
                     >
                         DSLLP Minute Book
                     </Link>
                     <Link
                         to="#"
-                        className="text-slate-400 lg:text-5xl hover:text-primary transition"
+                        className="text-slate-300 lg:text-5xl hover:text-primary transition"
                     >
                         Logistic Software Solutions
                     </Link>
@@ -51,6 +51,30 @@ export default function Navbar() {
         setProjectsOpen(false);
         setMobileOpen(false);
     }, [location]);
+
+    // Prevent body scroll when mobile menu is open
+    useEffect(() => {
+        if (mobileOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [mobileOpen]);
+
+    // Prevent body scroll when projects dropdown is open
+    useEffect(() => {
+        if (projectsOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [projectsOpen]);
 
     // keep dropdown mounted long enough to fade out
     useEffect(() => {
@@ -136,18 +160,6 @@ export default function Navbar() {
                         <span className="fa fa-bars"></span>
                     </button>
                 </div>
-
-                <AnimatePresence>
-                    {projectsVisible && (
-                        <ProjectsDropdown
-                            key="projects-dropdown"
-                            isOpen={projectsOpen}
-                            onMouseEnter={openProjects}
-                            onMouseLeave={closeProjects}
-                            className="z-50"
-                        />
-                    )}
-                </AnimatePresence>
 
                 {/* nav links mobile */}
                 <AnimatePresence>
@@ -238,6 +250,18 @@ export default function Navbar() {
                     )}
                 </AnimatePresence>
             </nav>
+
+            {/* Projects Dropdown - Rendered outside nav */}
+            <AnimatePresence>
+                {projectsVisible && (
+                    <ProjectsDropdown
+                        key="projects-dropdown"
+                        isOpen={projectsOpen}
+                        onMouseEnter={openProjects}
+                        onMouseLeave={closeProjects}
+                    />
+                )}
+            </AnimatePresence>
         </>
     );
 }

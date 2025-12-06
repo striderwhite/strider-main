@@ -15,6 +15,66 @@ module.exports = {
                 sans: ["Urbanist", ...defaultTheme.fontFamily.sans],
                 display: ["Urbanist", ...defaultTheme.fontFamily.sans],
             },
+            fontSize: {
+                h1: [
+                    "2.25rem", // 36px mobile
+                    {
+                        lineHeight: "1.15",
+                        fontWeight: "700",
+                    },
+                ],
+                "h1-md": [
+                    "3.25rem", // 52px MD+
+                    {
+                        lineHeight: "1.15",
+                        fontWeight: "700",
+                    },
+                ],
+                "h1-lg": [
+                    "4rem", // 64px LG+
+                    {
+                        lineHeight: "1.1",
+                        fontWeight: "700",
+                    },
+                ],
+
+                h2: [
+                    "1.75rem", // 28px mobile
+                    {
+                        lineHeight: "1.25",
+                        fontWeight: "600",
+                    },
+                ],
+                "h2-md": [
+                    "2.25rem", // 36px
+                    {
+                        lineHeight: "1.25",
+                        fontWeight: "600",
+                    },
+                ],
+                "h2-lg": [
+                    "3rem", // 48px
+                    {
+                        lineHeight: "1.2",
+                        fontWeight: "600",
+                    },
+                ],
+
+                h3: [
+                    "1.375rem", // 22px mobile
+                    {
+                        lineHeight: "1.3",
+                        fontWeight: "600",
+                    },
+                ],
+                "h3-md": [
+                    "1.75rem", // 28px
+                    {
+                        lineHeight: "1.3",
+                        fontWeight: "600",
+                    },
+                ],
+            },
             colors: {
                 // Backgrounds
                 "bg-body": "#000104",

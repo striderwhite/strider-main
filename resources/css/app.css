@@ -6,9 +6,14 @@
 @tailwind utilities;
 
 
-@layer base {
-  body {
-    @apply bg-bg-body text-white antialiased;
+  @layer base {
+  /* Global font color */
+  * {
+    @apply text-slate-300;
+  }
+
+  body{
+        @apply bg-bg-body text-slate-300 antialiased;
     font-family: 'Urbanist', sans-serif;
     background-image:
       radial-gradient(circle at 0% 0%, rgba(17, 57, 142, 0.25), transparent 55%),
@@ -16,4 +21,62 @@
       radial-gradient(circle at 50% 120%, rgba(37, 86, 193, 0.25), transparent 60%);
     background-color: #000104;
   }
+
+  h1 {
+    @apply text-h1 text-slate-100 font-bold;
+  }
+  @screen md {
+    h1 {
+      @apply text-h1-md;
+    }
+  }
+  @screen lg {
+    h1 {
+      @apply text-h1-lg;
+    }
+  }
+
+  h2 {
+    @apply text-h2 text-slate-100 font-semibold;
+  }
+  @screen md {
+    h2 {
+      @apply text-h2-md;
+    }
+  }
+  @screen lg {
+    h2 {
+      @apply text-h2-lg;
+    }
+  }
+
+  h3 {
+    @apply text-h3 text-slate-100 font-semibold;
+  }
+  @screen md {
+    h3 {
+      @apply text-h3-md;
+    }
+  }
+
+  p {
+    @apply text-base text-slate-300;
+  }
+
+  a, span {
+    @apply text-slate-300;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-slide {
+  animation: slide 2s linear infinite;
 }

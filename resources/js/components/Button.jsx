@@ -1,4 +1,6 @@
-export function Button({ variant = 'primary', className = '', ...props }) {
+import { Link } from "react-router-dom";
+
+export function Button({ variant = 'primary', className = '', link, ...props }) {
 
   const base =
     'inline-flex items-center justify-center rounded-pill px-6 py-2 text-md font-semibold transition';
@@ -11,7 +13,8 @@ export function Button({ variant = 'primary', className = '', ...props }) {
   };
 
   return (
-    <button
+    <Link
+      to={link}
       className={`${base} ${variants[variant]} ${className}`}
       {...props}
     />

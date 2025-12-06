@@ -4,7 +4,7 @@ export default function ModernizingBar({
   label = "Modernizing your application...",
 }) {
   return (
-    <div className="w-full max-w-sm space-y-2">
+    <div className="w-full max-w-md space-y-2">
       {/* Label + status */}
       <div className="flex items-center justify-between text-sm text-slate-300">
         <span>{label}</span>
