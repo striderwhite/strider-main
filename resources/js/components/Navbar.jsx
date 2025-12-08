@@ -14,7 +14,7 @@ const ProjectsDropdown = ({ isOpen, onMouseEnter, onMouseLeave }) => {
             animate={isOpen ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
         >
-            <div className="w-full max-w-[1040px] mx-auto flex flex-col py-8 h-full">
+            <div className="w-full max-w-[1200px] mx-auto flex flex-col py-8 h-full">
                 <div className="flex flex-col space-y-6 lg:space-y-12 h-1/2 justify-center md:px-10">
                     <h3 className="text-slate-400 font-2xl">Featured Projects</h3>
                     <Link
@@ -97,7 +97,7 @@ export default function Navbar() {
     return (
         <>
             <nav className="w-full fixed top-0 left-0 z-30 text-slate-300 bg-transparent backdrop-blur-lg">
-                <div className="max-w-[1040px] mx-auto px-4 flex items-center justify-between h-16">
+                <div className="max-w-[1200px] mx-auto px-4 flex items-center justify-between h-16">
                     {/* nav links desktop */}
                     <div className="hidden md:flex flex-1 items-center justify-start space-x-8">
                         <div className="relative" onMouseEnter={openProjects}>

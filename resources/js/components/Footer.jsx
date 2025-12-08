@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Icon } from "@iconify/react";
 import { Button } from "./Button";
@@ -59,21 +59,26 @@ const FooterTubes = () => {
 };
 
 export default function Footer() {
+    const location = useLocation();
+    const isContactPage = location.pathname === "/contact";
     return (
-        <footer className="relative w-full h-[80vh] text-center py-16 mt-32 overflow-hidden flex flex-col items-center justify-center gap-6">
-            {/* Tubes cursor background */}
-            <div className="absolute inset-0 -z-10 opacity-50">
-                <FooterTubes />
-            </div>
-
-            <div className="max-w-3xl px-4">
-                <h2 className="text-3xl md:text-4xl font-semibold">
-                    Let's bring your ideas to life.
-                </h2>
-                <Button variant="secondary" className="mt-6" link="/contact">
-                    Start a Project
-                </Button>
-            </div>
+        <footer className={`relative w-full ${isContactPage ? 'h-auto' : 'h-[80vh]'} text-center py-16 mt-32 overflow-hidden flex flex-col items-center justify-center gap-6`}>
+            {/* Tubes cursor background and CTA hidden on contact page */}
+            {!isContactPage && (
+                <>
+                    <div className="absolute inset-0 -z-10 opacity-50">
+                        <FooterTubes />
+                    </div>
+                    <div className="max-w-3xl px-4">
+                        <h2 className="text-3xl md:text-4xl font-semibold">
+                            Let's bring your ideas to life.
+                        </h2>
+                        <Button variant="secondary" className="mt-6" link="/contact">
+                            Start a Project
+                        </Button>
+                    </div>
+                </>
+            )}
             <p className="text-xs mt-auto absolute bottom-4">
                 &copy; {new Date().getFullYear()} Strider. All rights reserved.
             </p>

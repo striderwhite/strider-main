@@ -52,11 +52,7 @@ export default function FeaturedProjects() {
                     scrub: true,
                     pin: pin,
                     anticipatePin: 1,
-                    snap: {
-                        snapTo: 1 / (totalSlides - 1),
-                        duration: 0.4,
-                        ease: "power1.out",
-                    },
+                    // Removed snap for free scroll
                 },
             });
         }, section);
@@ -71,27 +67,23 @@ export default function FeaturedProjects() {
         >
             <div
                 ref={pinRef}
-                className="mx-auto flex h-screen max-w-6xl flex-col items-center px-4 pt-16 md:pt-24"
+                className="mx-auto flex h-screen max-w-6xl flex-row items-start px-4 pt-16 md:pt-24"
             >
-                {/* Header */}
-                <div className="flex flex-col items-center text-center">
-                    <p className="text-xs font-semibold uppercase tracking-[0.3em] text-sky-400">
-                        Featured projects
+                {/* Left: Featured projects label */}
+                <div className="flex flex-col justify-start items-start min-w-[180px] pr-8 pt-2">
+                    <p className="text-xs uppercase tracking-[0.25em] text-sky-400">
+                      ( Featured projects )
                     </p>
-                    <h2 className="mt-4 text-3xl md:text-4xl font-semibold">
-                        Custom software that brought back quality of life.
-                    </h2>
                 </div>
 
-                {/* Viewport: ONE card at a time */}
-                <div className="mt-4 w-full flex items-center justify-center">
+                {/* Right: Cards scroll vertically over pinned label */}
+                <div className="flex-1 w-full flex items-center justify-center">
                     <div className="relative w-full h-[60vh] md:h-[65vh] overflow-hidden">
                         <div
                             ref={trackRef}
                             className="absolute inset-0 flex flex-col"
                         >
                             {projects.map((project) => (
-                                // Each slide fills the viewport height
                                 <div
                                     key={project.title}
                                     className="h-full flex items-start justify-center pt-6 md:pt-10"

@@ -30,7 +30,7 @@ export default function HoverScrambleText({ text, className = "" }) {
                 clearInterval(timerRef.current);
                 setDisplay(text);
             }
-        }, 30);
+        }, 50);
     };
 
     return (
