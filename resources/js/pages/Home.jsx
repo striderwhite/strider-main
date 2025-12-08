@@ -6,7 +6,7 @@ import NotificationTicker from "@/components/NotificationTicker";
 import ModernizingBar from "@/components/ModernizingProgress.jsx";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import HoverScrambleText from "@/components/HoverScrambleText";
-//sections
+import PixelCards from "@/components/PixelCards";
 
 export default function Home() {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -73,14 +73,13 @@ export default function Home() {
                 </p>
             </div>
 
-                <FeaturedProjects />
-
+            <FeaturedProjects />
 
             {/* Features Section */}
             <div className="w-full max-w-[1200px] space-y-4 md:space-y-8">
                 <div>
-                    <p  className="text-xs uppercase tracking-[0.25em] text-sky-400">
-                       ( Benefit )
+                    <p className="text-xs uppercase tracking-[0.25em] text-sky-400">
+                        ( Benefit )
                     </p>
                     <h2 className="mt-2 md:mt-6 font-semibold">
                         Push your company past the competition.
@@ -124,9 +123,7 @@ export default function Home() {
                         </div>
                     </section>
                 </div>
-                <div>
-                    
-                </div>
+                <div></div>
             </div>
 
             {/* Benefits Section */}
@@ -137,41 +134,79 @@ export default function Home() {
 
                 <div className="flex gap-12">
                     <div className="flex gap-5 flex-col w-1/2">
-<HoverScrambleText text="Automate slow, manual tasks" className="text-2xl border-t border-b border-slate-800 py-4" />
-                        <HoverScrambleText text="Cut operating costs" className="text-2xl border-b border-slate-800 pb-4" />
-                
-                        <HoverScrambleText text="Replace messy spreadsheets" className="text-2xl border-b border-slate-800 pb-4" />
-                       
-                        <HoverScrambleText text="Shorten project timelines" className="text-2xl border-b border-slate-800 pb-4" />
-                    
+                        <HoverScrambleText
+                            text="Automate slow, manual tasks"
+                            className="text-2xl border-t border-b border-slate-800 py-4"
+                        />
+                        <HoverScrambleText
+                            text="Cut operating costs"
+                            className="text-2xl border-b border-slate-800 pb-4"
+                        />
+
+                        <HoverScrambleText
+                            text="Replace messy spreadsheets"
+                            className="text-2xl border-b border-slate-800 pb-4"
+                        />
+
+                        <HoverScrambleText
+                            text="Shorten project timelines"
+                            className="text-2xl border-b border-slate-800 pb-4"
+                        />
                     </div>
                     <div className="flex gap-5 flex-col w-1/2">
-                       
-                        <HoverScrambleText text="Boost team productivity" className="text-2xl border-t border-b border-slate-800 py-4" />
-                       
-                        <HoverScrambleText text="Improve data accuracy" className="text-2xl border-b border-slate-800 pb-4" />
-                        
-                        <HoverScrambleText text="Unlock real-time insights" className="text-2xl border-b border-slate-800 pb-4" />
-                       
-                        <HoverScrambleText text="Scale without extra resources" className="text-2xl border-b border-slate-800 pb-4" />
-                      
+                        <HoverScrambleText
+                            text="Boost team productivity"
+                            className="text-2xl border-t border-b border-slate-800 py-4"
+                        />
+
+                        <HoverScrambleText
+                            text="Improve data accuracy"
+                            className="text-2xl border-b border-slate-800 pb-4"
+                        />
+
+                        <HoverScrambleText
+                            text="Easily take payments"
+                            className="text-2xl border-b border-slate-800 pb-4"
+                        />
+
+                        <HoverScrambleText
+                            text="Scale without extra resources"
+                            className="text-2xl border-b border-slate-800 pb-4"
+                        />
                     </div>
                 </div>
             </div>
+
+            {/* Process */}
+              <PixelCards />
 
             {/* About section */}
             <div className="bg-[#111d31] h-[90vh] w-full">
                 <div className="flex max-w-[1200px] mx-auto h-full items-center">
                     <div className="flex justify-between items-start">
-                        <img src="/images/striderwhite-software-developer.jpg" alt="Strider white software developer" className="h-32 rounded-full"/>
+                        <img
+                            src="/images/strider-headshot2.jpg"
+                            alt="Strider white software developer"
+                            className="h-36 rounded-full"
+                        />
                         <div className="w-2/3">
-                            <h2 className="mb-6">Your journey is short because ours was long.</h2>
+                            <h2 className="mb-6">
+                                Your journey is short because ours was long.
+                            </h2>
                             <p className="text-2xl">
-                                Our speed isn't driven by luck. It's fueled by the momentum
-                                of two decades at Pentagram and Milton Glaser, building
-                                brands for household names. We know the secret recipe to
-                                create exceptional, stand out brands.
+                                Our speed isn't driven by luck. It's fueled by
+                                the momentum of two decades at Pentagram and
+                                Milton Glaser, building brands for household
+                                names. We know the secret recipe to create
+                                exceptional, stand out brands.
                             </p>
+                            <Button
+                                variant="secondary"
+                                className="mt-6"
+                                link="/about"
+                            >
+                                About Me
+                            </Button>
                         </div>
                     </div>
                 </div>

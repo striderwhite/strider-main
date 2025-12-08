@@ -67,56 +67,50 @@ export default function FeaturedProjects() {
         >
             <div
                 ref={pinRef}
-                className="mx-auto flex h-screen max-w-6xl flex-row items-start px-4 pt-16 md:pt-24"
+                className="mx-auto flex max-w-6xl flex-row items-start px-4 pt-16 md:pt-24"
+                style={{ minHeight: `calc(100vh + ${projects.length * 380}px)` }}
             >
-                {/* Left: Featured projects label */}
-                <div className="flex flex-col justify-start items-start min-w-[180px] pr-8 pt-2">
+                {/* Left: Featured projects label pinned */}
+                <div className="flex flex-col justify-start items-start min-w-[180px] pr-8 pt-2 sticky top-24 self-start z-10">
                     <p className="text-xs uppercase tracking-[0.25em] text-sky-400">
                       ( Featured projects )
                     </p>
                 </div>
 
-                {/* Right: Cards scroll vertically over pinned label */}
-                <div className="flex-1 w-full flex items-center justify-center">
-                    <div className="relative w-full h-[60vh] md:h-[65vh] overflow-hidden">
+                {/* Right: Cards scroll vertically past pinned label */}
+                <div className="flex-1 w-full flex flex-col gap-24 pt-12">
+                    {projects.map((project) => (
                         <div
-                            ref={trackRef}
-                            className="absolute inset-0 flex flex-col"
+                            key={project.title}
+                            className="flex items-start justify-center"
                         >
-                            {projects.map((project) => (
-                                <div
-                                    key={project.title}
-                                    className="h-full flex items-start justify-center pt-6 md:pt-10"
-                                >
-                                    <motion.article
-                                        className="w-full max-w-[600px] flex flex-col gap-1"
-                                        whileHover={{ y: -6, scale: 1.02 }}
-                                        transition={{
-                                            type: "spring",
-                                            stiffness: 220,
-                                            damping: 20,
-                                        }}
-                                    >
-                                        <div className="aspect-[16/10] w-full overflow-hidden rounded-2xl bg-slate-800">
-                                            <img
-                                                src={project.image}
-                                                alt={project.title}
-                                                className="h-full w-full object-cover"
-                                            />
-                                        </div>
-
-                                        <h3 className="mt-2 text-xl md:text-2xl font-semibold">
-                                            {project.title}
-                                        </h3>
-
-                                        <p className="text-sm md:text-lg text-slate-300">
-                                            {project.subtitle}
-                                        </p>
-                                    </motion.article>
+                            <motion.article
+                                className="w-full max-w-[600px] flex flex-col gap-1"
+                                whileHover={{ y: -6, scale: 1.02 }}
+                                transition={{
+                                    type: "spring",
+                                    stiffness: 220,
+                                    damping: 20,
+                                }}
+                            >
+                                <div className="aspect-[16/10] w-full overflow-hidden rounded-2xl bg-slate-800">
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className="h-full w-full object-cover"
+                                    />
                                 </div>
-                            ))}
+
+                                <h3 className="mt-2 text-xl md:text-2xl font-semibold">
+                                    {project.title}
+                                </h3>
+
+                                <p className="text-sm md:text-lg text-slate-300">
+                                    {project.subtitle}
+                                </p>
+                            </motion.article>
                         </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </section>
