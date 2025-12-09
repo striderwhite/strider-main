@@ -1,4 +1,5 @@
 import TextScrambleEffect from "@/components/TextScrambleEffect";
+import SphereScan from "@/components/SphereScan";
 
 const experiences = [
     {
@@ -26,7 +27,7 @@ const experiences = [
 export default function About() {
     return (
         <div className="flex flex-col md:gap-56">
-            <div className="max-w-[1200px] flex flex-col mx-auto text-center justify-center min-h-screen gap-4">
+            <div className="max-w-[1200px] flex flex-col mx-auto text-center justify-center min-h-screen gap-4 mt-12">
                 <TextScrambleEffect />
                 <h1>
                     Pairing <span className="">expert development skills</span>{" "}
@@ -35,11 +36,12 @@ export default function About() {
                         simplifying complex problems.
                     </span>
                 </h1>
+                <SphereScan className="mx-auto mt-[-220px] z-[-10]"/>
             </div>
 
             {/* about */}
 
-            <section className="px-6 md:px-10 max-w-[1200px] mx-auto">
+            <section className="px-6 md:px-10 max-w-[1200px] mx-auto mt-[-200px]">
                 <div className="">
                     {/* Top label */}
                     <p className="text-xs tracking-[0.25em] uppercase mb-6 text-sky-400">
@@ -57,9 +59,8 @@ export default function About() {
                         {/* Right column: main portrait + small image */}
                         <div className="flex flex-col items-end">
                             {/* Main image */}
-                            <div className="w-full max-w-[300px]">
-                                <div className="w-full overflow-hidden ">
-                                    {/* Replace src with your own image */}
+                            <div className="w-full max-w-[300px] ">
+                                <div className="w-full overflow-hidden">
                                     <img
                                         src="/images/profile-main.jpg"
                                         alt="Portrait"

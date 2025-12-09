@@ -8,27 +8,27 @@ export default function HoverScrambleText({ text, className = "" }) {
 
     const scramble = () => {
         let frame = 0;
-        const totalFrames = text.length + 6;
+        const totalFrames = text.length;
+        const original = text;
 
         clearInterval(timerRef.current);
 
         timerRef.current = setInterval(() => {
             let output = "";
-
-            for (let i = 0; i < text.length; i++) {
+            // Only scramble up to the current length of the original text
+            for (let i = 0; i < original.length; i++) {
                 if (i < frame) {
-                    output += text[i]; // reveal real character
+                    output += original[i];
                 } else {
                     output += CHARS[Math.floor(Math.random() * CHARS.length)];
                 }
             }
-
-            setDisplay(output);
+            // Do not add extra letters
+            setDisplay(output.slice(0, original.length));
             frame++;
-
             if (frame > totalFrames) {
                 clearInterval(timerRef.current);
-                setDisplay(text);
+                setDisplay(original);
             }
         }, 50);
     };

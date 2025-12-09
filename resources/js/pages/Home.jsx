@@ -6,7 +6,6 @@ import NotificationTicker from "@/components/NotificationTicker";
 import ModernizingBar from "@/components/ModernizingProgress.jsx";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import HoverScrambleText from "@/components/HoverScrambleText";
-import PixelCards from "@/components/PixelCards";
 
 export default function Home() {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -50,34 +49,36 @@ export default function Home() {
             </div>
 
             {/* Intro Section */}
-            <div className="max-w-3xl text-center">
+            <div>
                 <img
                     src="/images/software-hero.png"
-                    className="h-[600px] rounded-3xl mb-16 mx-auto transition-transform duration-200 ease-out"
+                    className="max-w-[800px] rounded-3xl mb-16 mx-auto transition-transform duration-200 ease-out"
                     style={{
                         transform: `perspective(1000px) rotateX(${-mousePosition.y}deg) rotateY(${
                             mousePosition.x
                         }deg)`,
                     }}
                 />
-                <p className="text-2xl">
-                    I design and build modern web applications that let
-                    businesses operate at their highest potential. By
-                    streamlining workflows, automating time-consuming tasks, and
-                    eliminating inefficiencies, I remove bottlenecks and create
-                    momentum.
-                </p>
-                <p className="text-2xl text-slate-100 mt-6 font-semibold">
-                    Software built for the pace of a modern business — fast,
-                    future-ready, and tailored to the way you work.
-                </p>
+                <div className="flex justify-between items-start gap-24 max-w-[1040px] pt-24">
+                    <h3 className="w-1/2">
+                        Software built for the pace of a modern business — fast,
+                        future-ready, and tailored to the way you work.
+                    </h3>
+                    <p className="w-1/2">
+                        I design and build modern web applications that let
+                        businesses operate at their highest potential. By
+                        streamlining workflows, automating time-consuming tasks, and
+                        eliminating inefficiencies, I remove bottlenecks and create
+                        momentum.
+                    </p>
+                </div>
             </div>
 
             <FeaturedProjects />
 
             {/* Features Section */}
             <div className="w-full max-w-[1200px] space-y-4 md:space-y-8">
-                <div>
+                <div className="text-center mb-20">
                     <p className="text-xs uppercase tracking-[0.25em] text-sky-400">
                         ( Benefit )
                     </p>
@@ -128,57 +129,51 @@ export default function Home() {
 
             {/* Benefits Section */}
             <div className="max-w-[1200px]">
-                <h2 className="mb-10">
-                    Push your company past the competition.
+                <h2 className="mb-10 text-left w-1/2">
+                    A faster, more efficient way to run your business.
                 </h2>
 
-                <div className="flex gap-12">
-                    <div className="flex gap-5 flex-col w-1/2">
-                        <HoverScrambleText
-                            text="Automate slow, manual tasks"
-                            className="text-2xl border-t border-b border-slate-800 py-4"
-                        />
-                        <HoverScrambleText
-                            text="Cut operating costs"
-                            className="text-2xl border-b border-slate-800 pb-4"
-                        />
-
-                        <HoverScrambleText
-                            text="Replace messy spreadsheets"
-                            className="text-2xl border-b border-slate-800 pb-4"
-                        />
-
-                        <HoverScrambleText
-                            text="Shorten project timelines"
-                            className="text-2xl border-b border-slate-800 pb-4"
-                        />
-                    </div>
-                    <div className="flex gap-5 flex-col w-1/2">
-                        <HoverScrambleText
-                            text="Boost team productivity"
-                            className="text-2xl border-t border-b border-slate-800 py-4"
-                        />
-
-                        <HoverScrambleText
-                            text="Improve data accuracy"
-                            className="text-2xl border-b border-slate-800 pb-4"
-                        />
-
-                        <HoverScrambleText
-                            text="Easily take payments"
-                            className="text-2xl border-b border-slate-800 pb-4"
-                        />
-
-                        <HoverScrambleText
-                            text="Scale without extra resources"
-                            className="text-2xl border-b border-slate-800 pb-4"
-                        />
+                <div className="flex w-full justify-end">
+                    <div className="flex gap-12 max-w-3xl w-full">
+                        <div className="flex gap-5 flex-col w-1/2">
+                            <HoverScrambleText
+                                text="Automate slow, manual tasks"
+                                className="text-xl border-t border-b border-slate-800 py-4"
+                            />
+                            <HoverScrambleText
+                                text="Cut operating costs"
+                                className="text-xl border-b border-slate-800 pb-4"
+                            />
+                            <HoverScrambleText
+                                text="Replace messy spreadsheets"
+                                className="text-xl border-b border-slate-800 pb-4"
+                            />
+                            <HoverScrambleText
+                                text="Shorten project timelines"
+                                className="text-xl border-b border-slate-800 pb-4"
+                            />
+                        </div>
+                        <div className="flex gap-5 flex-col w-1/2">
+                            <HoverScrambleText
+                                text="Boost team productivity"
+                                className="text-xl border-t border-b border-slate-800 py-4"
+                            />
+                            <HoverScrambleText
+                                text="Improve data accuracy"
+                                className="text-xl border-b border-slate-800 pb-4"
+                            />
+                            <HoverScrambleText
+                                text="Easily take payments"
+                                className="text-xl border-b border-slate-800 pb-4"
+                            />
+                            <HoverScrambleText
+                                text="Scale without extra resources"
+                                className="text-xl border-b border-slate-800 pb-4"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
-
-            {/* Process */}
-              <PixelCards />
 
             {/* About section */}
             <div className="bg-[#111d31] h-[90vh] w-full">
