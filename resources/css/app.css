@@ -35,25 +35,25 @@
     }
   }
 
-  h2 {
+  h2, h2 span {
     @apply text-h2 text-slate-100 font-semibold;
   }
   @screen md {
-    h2 {
+    h2, h2 span {
       @apply text-h2-md;
     }
   }
   @screen lg {
-    h2 {
+    h2, h2 span {
       @apply text-h2-lg;
     }
   }
 
-  h3 {
+  h3, h3 span {
     @apply text-h3 text-slate-100 font-semibold;
   }
   @screen md {
-    h3 {
+    h3, h3 span {
       @apply text-h3-md;
     }
   }

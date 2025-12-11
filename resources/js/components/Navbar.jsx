@@ -18,22 +18,22 @@ const ProjectsDropdown = ({ isOpen, onMouseEnter, onMouseLeave }) => {
                 <div className="flex flex-col space-y-6 lg:space-y-12 h-1/2 justify-center md:px-10">
                     <h3 className="text-slate-400 font-2xl">Featured Projects</h3>
                     <Link
-                        to="#"
+                        to="/projects/condo-doc-review"
                         className="text-slate-300 lg:text-5xl hover:text-primary transition"
                     >
                         Condo Doc Review
                     </Link>
                     <Link
-                        to="#"
+                        to="/projects/dsllp-minute-book"
                         className="text-slate-300 lg:text-5xl hover:text-primary transition"
                     >
-                        DSLLP Minute Book
+                        DSLLP Minute Book (Coming Soon)
                     </Link>
                     <Link
-                        to="#"
+                        to="/projects/logistic-software-solution"
                         className="text-slate-300 lg:text-5xl hover:text-primary transition"
                     >
-                        Logistic Software Solutions
+                        Logistic Software Solution
                     </Link>
                 </div>
             </div>
@@ -194,14 +194,14 @@ export default function Navbar() {
                                 </summary>
                                 <div className="pl-4 flex flex-col space-y-1">
                                     <h2 className="text-slate-300 font-xs">Featured Projects</h2>
-                                    <Link to="#" className="py-1 text-lg text-slate-300">
+                                    <Link to="/projects/condo-doc-review" className="py-1 text-lg text-slate-300">
                                         Condo Doc Review
                                     </Link>
-                                    <Link to="#" className="py-1 text-lg text-slate-300">
-                                        DSLLP Minute Book
+                                    <Link to="/projects/dsllp-minute-book" className="py-1 text-lg text-slate-300">
+                                        DSLLP Minute Book (Coming Soon)
                                     </Link>
-                                    <Link to="#" className="py-1 text-lg text-slate-300">
-                                         Logistic Software Solutions
+                                    <Link to="/projects/logistic-software-solution" className="py-1 text-lg text-slate-300">
+                                         Logistic Software Solution
                                     </Link>
                                 </div>
                             </details>

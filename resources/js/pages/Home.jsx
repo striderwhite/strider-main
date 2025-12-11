@@ -1,13 +1,18 @@
+"use client";
+
 //custom components
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { Icon } from "@iconify/react";
 import NetworkBackground from "@/components/NetworkBackground";
 import { Button } from "@/components/Button";
 import NotificationTicker from "@/components/NotificationTicker";
 import ModernizingBar from "@/components/ModernizingProgress.jsx";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import HoverScrambleText from "@/components/HoverScrambleText";
+import CursorBubble from "@/components/CursorBubble";
 
 export default function Home() {
+    const containerRef = useRef(null);
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
     useEffect(() => {
@@ -67,9 +72,9 @@ export default function Home() {
                     <p className="w-1/2">
                         I design and build modern web applications that let
                         businesses operate at their highest potential. By
-                        streamlining workflows, automating time-consuming tasks, and
-                        eliminating inefficiencies, I remove bottlenecks and create
-                        momentum.
+                        streamlining workflows, automating time-consuming tasks,
+                        and eliminating inefficiencies, I remove bottlenecks and
+                        create momentum.
                     </p>
                 </div>
             </div>
@@ -130,7 +135,9 @@ export default function Home() {
             {/* Benefits Section */}
             <div className="max-w-[1200px]">
                 <h2 className="mb-10 text-left w-1/2">
-                    A faster, more efficient way to run your business.
+                    A faster, <span className="bg-gradient-to-r from-[#4f8df0] to-[#5cd4ec] bg-clip-text text-transparent">
+  more efficient
+</span> way to run your business.
                 </h2>
 
                 <div className="flex w-full justify-end">
@@ -176,28 +183,47 @@ export default function Home() {
             </div>
 
             {/* About section */}
-            <div className="bg-[#111d31] h-[90vh] w-full">
+            <div className="h-[90vh] w-full" id="about-section">
+                <CursorBubble containerId="about-section" />
                 <div className="flex max-w-[1200px] mx-auto h-full items-center">
                     <div className="flex justify-between items-start">
                         <img
-                            src="/images/strider-headshot2.jpg"
+                            src="/images/profile-main-head.png"
                             alt="Strider white software developer"
                             className="h-36 rounded-full"
                         />
                         <div className="w-2/3">
-                            <h2 className="mb-6">
-                                Your journey is short because ours was long.
-                            </h2>
-                            <p className="text-2xl">
-                                Our speed isn't driven by luck. It's fueled by
-                                the momentum of two decades at Pentagram and
-                                Milton Glaser, building brands for household
-                                names. We know the secret recipe to create
-                                exceptional, stand out brands.
+                            <p className="text-xs uppercase tracking-[0.25em] text-sky-400 mb-6">
+                                ( Nice to meet you )
                             </p>
+                            <h2 className="mb-8 max-w-[600px] flex gap-3 items-center">
+                                Hi, I'm Strider{" "}
+                                    <Icon icon="mdi:hand-wave-outline"/>
+                            </h2>
+                            <div className="flex flex-col gap-3">
+                                <p className="text-xl">I'm a software developer based in Edmonton,
+                                    Alberta, with a passion for building
+                                    software that's secure, scalable, and
+                                    genuinely makes life easier for the people
+                                    who use it every day.
+                                </p>
+                                <p className="text-xl">
+                                    My work includes developing AI-driven
+                                    pipelines and chatbot frameworks,leading
+                                    teams, architecting enterprise-level SaaS
+                                    platforms, and shipping production systems
+                                    trusted by hundreds of clients.
+                                </p>
+                                <p className="text-xl">
+                                    Coding has been a lifelong passion for me.
+                                    When I'm not coding, you can find me walking
+                                    my dog Ace, snowboarding, or restarting my
+                                    Factorio factory for the millionth time.
+                                </p>
+                            </div>
                             <Button
                                 variant="secondary"
-                                className="mt-6"
+                                className="mt-12"
                                 link="/about"
                             >
                                 About Me

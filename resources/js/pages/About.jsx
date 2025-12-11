@@ -54,6 +54,10 @@ export default function About() {
                             <h2>
                                 For over 10 years, I've specialized in planning and building software that saves businesses time and money.
                             </h2>
+
+                            <p> 
+                                I'm a fullstack developer and team lead with years of experience delivering high-performance web applications, APIs, and custom data systems. I specialize in end-to-end development, from advanced data modeling and backend architecture to modern UIs and cross-platform deployment.
+                            </p>
                         </div>
 
                         {/* Right column: main portrait + small image */}
@@ -156,12 +160,15 @@ export default function About() {
                               "OCR",
                               "AI"
                           ].map((skill) => (
-                              <span
-                                  key={skill}
-                                  className="inline-flex items-center px-5 h-8 rounded-full bg-sky-900/80 text-sky-100 text-base font-semibold shadow-md border border-sky-700/40"
-                              >
-                                  {skill}
-                              </span>
+                            <span
+                            key={skill}
+                            className="inline-flex items-center px-5 h-8 rounded-full transition-all duration-300
+                                        bg-sky-900/80 text-sky-100 cursor-pointer text-base font-semibold border border-sky-700/40
+                                        shadow-[0_0_10px_rgba(56,189,248,0.25)]
+                                        hover:shadow-[0_0_18px_rgba(56,189,248,0.55)] hover:border-sky-400"
+                            >
+                            {skill}
+                            </span>
                           ))}
                       </div>
                     </div>
