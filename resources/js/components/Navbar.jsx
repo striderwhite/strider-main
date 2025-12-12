@@ -129,7 +129,7 @@ export default function Navbar() {
                             to="/"
                             className="text-lg font-bold"
                         >
-                            StriderWhite
+                            Strider White
                         </Link>
                     </div>
 
@@ -153,11 +153,11 @@ export default function Navbar() {
 
                     {/* mobile menu button, hidden in desktop */}
                     <button
-                        className="md:hidden text-2xl text-slate-300 focus:outline-none"
+                        className="md:hidden text-4xl text-slate-300 focus:outline-none"
                         onClick={() => setMobileOpen(!mobileOpen)}
                         aria-label="Open menu"
                     >
-                        <span className="fa fa-bars"></span>
+                        <span className="fa fa-bars text-2xl"></span>
                     </button>
                 </div>
 
@@ -166,7 +166,7 @@ export default function Navbar() {
                     {mobileOpen && (
                         <motion.div
                             key="mobile-menu"
-                            className="md:hidden fixed inset-0 w-full h-full z-40 px-4 pt-20 pb-4 flex flex-col space-y-2 bg-gradient-to-b from-[#030a1b]/5 via-[#030a1b] to-[#030a1b] backdrop-blur-xl text-slate-300"
+                            className="md:hidden fixed inset-0 w-full h-[100vh] z-40 px-4 pt-20 pb-4 flex flex-col space-y-2 bg-dark text-slate-300"
                             initial={{ y: -40, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             exit={{ y: -40, opacity: 0 }}
@@ -193,7 +193,6 @@ export default function Navbar() {
                                     Projects
                                 </summary>
                                 <div className="pl-4 flex flex-col space-y-1">
-                                    <h2 className="text-slate-300 font-xs">Featured Projects</h2>
                                     <Link to="/projects/condo-doc-review" className="py-1 text-lg text-slate-300">
                                         Condo Doc Review
                                     </Link>

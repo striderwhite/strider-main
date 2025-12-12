@@ -3,7 +3,6 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 
-
 //initial form values
 const initialValues = {
     firstName: "",
@@ -27,20 +26,21 @@ export default function Contact() {
     const formRef = useRef(null);
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen px-4 lg:pt-32">
+        <div className="flex flex-col items-center justify-center px-4 pt-24 lg:pt-32">
             <div className="w-full max-w-[900px]">
-                <h1 className="mb-12 text-5xl">
-                    Would your business benefit from <br /> a custom software
-                    solution? <br /> Let's chat.
+                <h1 className="mb-2 md:mb-4 text-3xl md:text-4xl max-w-2xl">
+                    Would your business benefit from a custom software solution?
+                </h1>
+                <h1 className="mb-12 text-3xl md:text-4xl bg-gradient-to-r from-[#4f8df0] to-[#5cd4ec] bg-clip-text text-transparent">
+                                     
+                        Let's chat.
+                 
                 </h1>
 
                 <Formik
                     initialValues={initialValues}
                     validationSchema={ContactSchema}
                     onSubmit={(values, { resetForm }) => {
-                        setIsSubmitting(true);
-                        
-
                         emailjs
                             .sendForm(
                                 process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
@@ -50,22 +50,20 @@ export default function Contact() {
                             )
                             .then(() => {
                                 resetForm();
-                                setSuccess(true);
+                                setShowSuccess(true);
                                 setError(false);
                             })
                             .catch((err) => {
                                 setError(true);
+                                setShowSuccess(false);
                                 console.error(err);
-                            })
-                            .finally(() => {
-                                setIsSubmitting(false);
                             });
                     }}
                 >
                     {({ isSubmitting, errors, touched }) => (
                         <Form className="space-y-6" ref={formRef}>
                             {/* Name Fields */}
-                            <div className="flex gap-6">
+                            <div className="flex flex-col sm:flex-row gap-6">
                                 <div className="flex-1">
                                     <label
                                         htmlFor="firstName"
@@ -77,7 +75,7 @@ export default function Contact() {
                                         type="text"
                                         id="firstName"
                                         name="firstName"
-                                        className={`w-full text-2xl py-2 bg-transparent border-0 border-b-[1px] ${
+                                        className={`w-full text-xl md:text-2xl py-2 bg-transparent border-0 border-b-[1px] ${
                                             errors.firstName &&
                                             touched.firstName
                                                 ? "border-b-red-500"
@@ -100,7 +98,7 @@ export default function Contact() {
                                         type="text"
                                         id="lastName"
                                         name="lastName"
-                                        className={`w-full text-2xl py-2 bg-transparent border-0 border-b-[1px] ${
+                                        className={`w-full text-xl md:text-2xl py-2 bg-transparent border-0 border-b-[1px] ${
                                             errors.lastName && touched.lastName
                                                 ? "border-b-red-500"
                                                 : "border-b-slate-600"
@@ -124,7 +122,7 @@ export default function Contact() {
                                     type="email"
                                     id="email"
                                     name="email"
-                                    className={`w-full text-2xl py-2 bg-transparent border-0 border-b-[1px] ${
+                                    className={`w-full text-xl md:text-2xl py-2 bg-transparent border-0 border-b-[1px] ${
                                         errors.email && touched.email
                                             ? "border-b-red-500"
                                             : "border-b-slate-600"
@@ -148,7 +146,7 @@ export default function Contact() {
                                     id="message"
                                     name="message"
                                     rows={4}
-                                    className={`w-full text-2xl py-2 bg-transparent border-0 border-b-[1px] ${
+                                    className={`w-full text-xl md:text-2xl py-2 bg-transparent border-0 border-b-[1px] ${
                                         errors.message && touched.message
                                             ? "border-b-red-500"
                                             : "border-b-slate-600"
@@ -201,7 +199,11 @@ export default function Contact() {
                                           absolute inset-0 flex items-center justify-center
                                           text-emerald-400 text-2xl
                                           transition-all duration-300
-                                          ${showSuccess ? "scale-100 opacity-100" : "scale-0 opacity-0"}
+                                          ${
+                                              showSuccess
+                                                  ? "scale-100 opacity-100"
+                                                  : "scale-0 opacity-0"
+                                          }
                                         `}
                                     >
                                         {/* Simple SVG checkmark */}
@@ -221,8 +223,14 @@ export default function Contact() {
                                 </div>
                             </div>
 
+                            {showSuccess && (
+                                <p className="text-emerald-400 text-lg font-medium">
+                                    ✓ Your message was sent successfully! I'll be in touch soon.
+                                </p>
+                            )}
+
                             {error && (
-                                <p>Something went wrong, please try again.</p>
+                                <p className="text-red-500">Something went wrong, please try again.</p>
                             )}
                         </Form>
                     )}

@@ -48,8 +48,8 @@ export default function ProjectDetail() {
   const nextProject = projects[nextIdx];
 
   return (
-    <div className="w-full px-6 md:px-10 lg:px-0 flex justify-center py-20">
-      <div className="max-w-5xl w-full space-y-32">
+    <div className="w-full px-6 md:px-10 lg:px-0 flex justify-center pt-24 pb-8">
+      <div className="max-w-5xl w-full space-y-12 md:space-y-32">
 
         {/* Top hero image */}
         <div className="w-full">
@@ -99,51 +99,6 @@ export default function ProjectDetail() {
           </aside>
         </section>
 
-        {/* Color palette section */}
-        <section className="space-y-4">
-          <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
-            Color Palette
-          </h3>
-          <p className="text-slate-400 text-sm md:text-base max-w-2xl">
-            Placeholder: Short note on how the color system supports the brand —
-            for example, balancing trust, energy, and clarity across the product.
-          </p>
-
-          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-4">
-            {/* These are just placeholder swatches - your styling can override */}
-            <div className="flex flex-col gap-2">
-              <div className="h-14 rounded-2xl bg-sky-500" />
-              <span className="text-xs uppercase tracking-[0.15em] text-slate-400">
-                Primary
-              </span>
-            </div>
-            <div className="flex flex-col gap-2">
-              <div className="h-14 rounded-2xl bg-indigo-500" />
-              <span className="text-xs uppercase tracking-[0.15em] text-slate-400">
-                Accent 1
-              </span>
-            </div>
-            <div className="flex flex-col gap-2">
-              <div className="h-14 rounded-2xl bg-emerald-500" />
-              <span className="text-xs uppercase tracking-[0.15em] text-slate-400">
-                Accent 2
-              </span>
-            </div>
-            <div className="flex flex-col gap-2">
-              <div className="h-14 rounded-2xl bg-amber-400" />
-              <span className="text-xs uppercase tracking-[0.15em] text-slate-400">
-                Highlight
-              </span>
-            </div>
-            <div className="flex flex-col gap-2">
-              <div className="h-14 rounded-2xl bg-slate-800" />
-              <span className="text-xs uppercase tracking-[0.15em] text-slate-400">
-                Neutral
-              </span>
-            </div>
-          </div>
-        </section>
-
         {/* Solution text */}
         <section className="space-y-4 max-w-3xl">
           <h2 className="text-2xl md:text-3xl font-semibold">
@@ -172,7 +127,7 @@ export default function ProjectDetail() {
           <img
             src="https://images.unsplash.com/photo-1712640183722-ec59693f7c82?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt={`${project.title} detail layout placeholder`}
-            className="w-full rounded-3xl shadow-xl border border-slate-800/60 object-cover"
+            className="w-full lg:w-[80%] max-h-[800px] mx-auto rounded-3xl shadow-xl border border-slate-800/60 object-cover"
           />
         </section>
 
@@ -181,7 +136,7 @@ export default function ProjectDetail() {
           <div className="flex justify-end">
             <Link
               to={`/projects/${nextProject.id}`}
-              className="inline-block px-8 py-4 text-4xl"
+              className="inline-block px-8 py-4 text-lg md:text-xl hover:text-sky-400 transition"
             >
               Next: {nextProject.title} &rarr;
             </Link>

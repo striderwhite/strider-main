@@ -92,11 +92,10 @@ export default function FeaturedProjects() {
             )}
             <div
                 ref={pinRef}
-                className="mx-auto flex max-w-6xl flex-row items-start px-4 pt-16 md:pt-24"
-                style={{ minHeight: `calc(100vh + ${projects.length * 400}px)` }}
+                className="mx-auto flex max-w-6xl flex-col md:flex-row items-start px-4 pt-16 md:pt-24"
             >
                 {/* Left: Featured projects label pinned */}
-                <div className="flex flex-col justify-start items-start min-w-[180px] pr-8 pt-2 sticky top-24 self-start z-10">
+                <div className="flex justify-start items-start min-w-[180px] pr-8 pt-2 md:sticky top-24 self-start z-10 mb-6 md:mb-0">
                     <p className="text-xs uppercase tracking-[0.25em] text-sky-400">
                       ( Featured projects )
                     </p>

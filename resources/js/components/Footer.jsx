@@ -13,7 +13,6 @@ const FooterTubes = () => {
 
         async function init() {
             if (!canvasRef.current) return;
-            if (window.matchMedia("(pointer: coarse)").matches) return; // don't implement on mobile
 
             // Dynamically import the cursor effect from the CDN (same as CodePen)
             const module = await import(
@@ -62,7 +61,7 @@ export default function Footer() {
     const location = useLocation();
     const isContactPage = location.pathname === "/contact";
     return (
-        <footer className={`relative w-full ${isContactPage ? 'h-auto' : 'h-[80vh]'} text-center py-16 mt-32 overflow-hidden flex flex-col items-center justify-center gap-6`}>
+        <footer className={`relative w-full ${isContactPage ? 'h-auto' : 'h-[80vh]'} text-center py-16 md:mt-32 overflow-hidden flex flex-col items-center justify-center gap-6`}>
             {/* Tubes cursor background and CTA hidden on contact page */}
             {!isContactPage && (
                 <>
@@ -80,7 +79,7 @@ export default function Footer() {
                 </>
             )}
             <p className="text-xs mt-auto absolute bottom-4">
-                &copy; {new Date().getFullYear()} Strider. All rights reserved.
+                &copy; {new Date().getFullYear()} Strider White. All rights reserved.
             </p>
         </footer>
     );
