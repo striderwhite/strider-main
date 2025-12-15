@@ -12,19 +12,19 @@ const projects = [
         id: "condo-doc-review",
         title: "Condo Doc Review",
         subtitle:
-            "Automated document analysis system that cuts review time from 6+ hours to 30 minutes while improving accuracy and consistency.",
+            "Automated document analysis system that dramatically reduces review time while improving accuracy and consistency.",
         image: "/images/projects/condo.jpg",
     },
     {
         id: "logistic-software-solution",
         title: "Logistics Automation System",
-        subtitle: "Inventory tracking system that eliminated manual spreadsheets and reduced tracking errors by 95% across multiple warehouse locations.",
+        subtitle: "Inventory tracking system that eliminated manual spreadsheets and dramatically reduced tracking errors across multiple warehouse locations.",
         image: "/images/projects/warehouse.jpg",
     },
     {
         id: "dsllp-minute-book",
         title: "Digital Minute Book System",
-        subtitle: "Automated document management that replaced physical file cabinets, enabling instant access and secure client sharing in seconds.",
+        subtitle: "Automated document management that replaced physical file cabinets, enabling instant access and secure client sharing.",
         image: "/images/projects/law.jpg",
     },
 ];

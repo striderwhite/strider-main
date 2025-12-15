@@ -4,26 +4,26 @@ const projects = [
   {
     id: "condo-doc-review",
     title: "Document Review Automation",
-    subtitle: "Automated analysis system that cuts condominium document review time from 6+ hours to 30 minutes.",
+    subtitle: "Automated analysis system that dramatically reduces condominium document review time.",
     image: "/images/projects/condo-doc-review.jpg",
     description:
-      "Real estate professionals were spending 6-8 hours manually reviewing hundreds of pages of condominium documents for every property assessment. This automation system eliminates 90% of that manual work by automatically processing reserve fund studies, budgets, bylaws, financial statements, and insurance documents. The system extracts key facts, flags risks, and generates structured reports in minutes instead of hours. Reviewers can verify any finding by clicking through to source documents, maintaining accuracy while dramatically accelerating the process. The result: $400 saved per review, consistent quality across all assessments, and the ability to handle 10x more volume without adding staff."
+      "Real estate professionals were spending hours manually reviewing hundreds of pages of condominium documents for every property assessment. This automation system eliminates the majority of that manual work by automatically processing reserve fund studies, budgets, bylaws, financial statements, and insurance documents. The system extracts key facts, flags risks, and generates structured reports in minutes instead of hours. Reviewers can verify any finding by clicking through to source documents, maintaining accuracy while dramatically accelerating the process. The result: significant time savings per review, consistent quality across all assessments, and the ability to handle much higher volume without adding staff."
   },
   {
     id: "logistic-software-solution",
     title: "Inventory Tracking Automation",
-    subtitle: "Real-time tracking system that eliminated 95% of inventory errors across multiple warehouse locations.",
+    subtitle: "Real-time tracking system that dramatically reduced inventory errors across multiple warehouse locations.",
     image: "/images/projects/logistic-software-solution.jpg",
     description:
-      "A tire storage company was losing 25 hours per week managing inventory across spreadsheets, with 15-20 tracking errors occurring weekly. Manual updates couldn't keep pace with operations, causing customer service issues and operational chaos. This automation system replaced all spreadsheets with real-time tracking accessible via mobile devices and web dashboards. Warehouse staff scan items on-site, instantly updating central records. The system handles partial movements, integrates with partner systems, and provides complete audit trails. Within 3 months: tracking errors dropped 95%, staff saved 25 hours weekly, and the business scaled from 1 to 3 warehouse locations without adding administrative personnel."
+      "A tire storage company was losing significant time managing inventory across spreadsheets, with frequent tracking errors occurring. Manual updates couldn't keep pace with operations, causing customer service issues and operational chaos. This automation system replaced all spreadsheets with real-time tracking accessible via mobile devices and web dashboards. Warehouse staff scan items on-site, instantly updating central records. The system handles partial movements, integrates with partner systems, and provides complete audit trails. The result: tracking errors dropped dramatically, staff hours were freed up for higher-value work, and the business scaled to multiple warehouse locations without adding administrative personnel."
   },
   {
     id: "dsllp-minute-book",
     title: "Document Management Automation",
-    subtitle: "Digital system that replaced 12 filing cabinets with instant, secure document access.",
+    subtitle: "Digital system that replaced physical filing with instant, secure document access.",
     image: "/images/projects/dsllp-minute-book.jpg",
     description:
-      "A law firm was maintaining corporate records in physical minute books stored across 12 filing cabinets. Accessing documents required staff to manually search files, making updates was time-consuming, and sharing records with clients meant photocopying and mailing. This automation system digitized the entire process. Staff upload and organize documents online with instant search capabilities. Clients receive secure, time-limited links to view their records anytime from anywhere. Updates happen in real-time, version history is automatic, and generating PDF compilations takes seconds instead of hours. The result: eliminated physical storage, reduced document preparation time by 80%, improved client satisfaction by 40%, and gave the firm complete data ownership without vendor lock-in."
+      "A law firm was maintaining corporate records in physical minute books stored in filing cabinets. Accessing documents required staff to manually search files, making updates was time-consuming, and sharing records with clients meant photocopying and mailing. This automation system digitized the entire process. Staff upload and organize documents online with instant search capabilities. Clients receive secure, time-limited links to view their records anytime from anywhere. Updates happen in real-time, version history is automatic, and generating PDF compilations takes seconds instead of hours. The result: eliminated physical storage, dramatically reduced document preparation time, improved client satisfaction, and gave the firm complete data ownership without vendor lock-in."
   }
 ];
 
@@ -45,9 +45,9 @@ const projectImages = {
 const projectDetails = {
   "condo-doc-review": {
     overview: [
-      "The Problem: Real estate professionals were spending 6-8 hours per property manually reviewing hundreds of pages of condominium documents. This bottleneck limited how many properties they could assess and increased costs for every client.",
-      "The Solution: An automated document analysis system that processes reserve fund studies, budgets, bylaws, financial statements, meeting minutes, and insurance documents—extracting key facts, flagging risks, and generating structured reports in under 30 minutes.",
-      "The Impact: 90% reduction in review time, $400 saved per review, 98% accuracy rate, and the ability to handle 10x more volume without hiring additional staff. Reviewers maintain full control with instant access to source documents for verification."
+      "The Problem: Real estate professionals were spending hours per property manually reviewing hundreds of pages of condominium documents. This bottleneck limited how many properties they could assess and increased costs for every client.",
+      "The Solution: An automated document analysis system that processes reserve fund studies, budgets, bylaws, financial statements, meeting minutes, and insurance documents: extracting key facts, flagging risks, and generating structured reports quickly.",
+      "The Impact: Dramatic reduction in review time, significant cost savings per review, high accuracy rate, and the ability to handle much higher volume without hiring additional staff. Reviewers maintain full control with instant access to source documents for verification."
     ],
     scope: [
       "Automated document upload and processing",
@@ -58,15 +58,15 @@ const projectDetails = {
     ],
     solution: [
       "Built an automated processing pipeline that handles mixed document formats, extracting critical information while maintaining source references for every data point.",
-      "Intelligent extraction identifies financial health indicators, liability flags, and operational risks—presenting findings in clear, actionable reports that previously took hours to compile manually.",
-      "Result: Consistent, accurate assessments delivered in 30 minutes instead of 6+ hours, enabling the business to scale review volume without proportional cost increases."
+      "Intelligent extraction identifies financial health indicators, liability flags, and operational risks. Findings are presented in clear, actionable reports that previously took hours to compile manually.",
+      "Result: Consistent, accurate assessments delivered in minutes instead of hours, enabling the business to scale review volume without proportional cost increases."
     ]
   },
   "logistic-software-solution": {
     overview: [
-      "The Problem: A tire storage operation was drowning in spreadsheets, experiencing 15-20 tracking errors per week. Staff spent 25 hours weekly updating records manually across multiple locations, causing customer service issues and operational chaos.",
+      "The Problem: A tire storage operation was drowning in spreadsheets with frequent tracking errors. Staff spent significant time weekly updating records manually across multiple locations, causing customer service issues and operational chaos.",
       "The Solution: A real-time inventory tracking system accessible via mobile devices and web dashboards. Warehouse staff scan items on-site, instantly updating central records. No more spreadsheets, no more manual data entry, no more tracking errors.",
-      "The Impact: 95% reduction in tracking errors, 25 hours saved weekly, and successful expansion from 1 to 3 warehouse locations without adding administrative staff. Complete visibility across all locations with instant reporting and audit trails."
+      "The Impact: Dramatic reduction in tracking errors, substantial time savings weekly, and successful expansion to multiple warehouse locations without adding administrative staff. Complete visibility across all locations with instant reporting and audit trails."
     ],
     scope: [
       "Real-time inventory tracking across multiple locations",
@@ -77,15 +77,15 @@ const projectDetails = {
     ],
     solution: [
       "Replaced spreadsheet chaos with a centralized tracking system that updates in real-time from mobile devices, eliminating manual data entry and the errors that came with it.",
-      "Built mobile-first workflows for warehouse staff with barcode scanning, partial movement handling, and offline capability—ensuring operations never stop due to connectivity issues.",
-      "Result: Operations team scaled 3x without proportional cost increases, errors dropped 95%, and management gained real-time visibility they never had with spreadsheets."
+      "Built mobile-first workflows for warehouse staff with barcode scanning, partial movement handling, and offline capability. Operations never stop due to connectivity issues.",
+      "Result: Operations team scaled significantly without proportional cost increases, errors dropped dramatically, and management gained real-time visibility they never had with spreadsheets."
     ]
   },
   "dsllp-minute-book": {
     overview: [
-      "The Problem: A law firm maintained corporate records in physical minute books across 12 filing cabinets. Accessing documents required manual file searches, updates were time-consuming, and sharing records with clients meant photocopying and mailing—often taking days.",
+      "The Problem: A law firm maintained corporate records in physical minute books in filing cabinets. Accessing documents required manual file searches, updates were time-consuming, and sharing records with clients meant photocopying and mailing, often taking days.",
       "The Solution: A digital document management system that eliminates physical storage entirely. Staff upload and organize documents with instant search. Clients receive secure links to view their records anytime, from anywhere. Updates happen in seconds, not hours.",
-      "The Impact: Eliminated 12 filing cabinets, reduced document preparation time by 80%, improved client satisfaction by 40%, and gave the firm complete data ownership without vendor lock-in. What took days now takes seconds."
+      "The Impact: Eliminated physical filing cabinets, dramatically reduced document preparation time, improved client satisfaction, and gave the firm complete data ownership without vendor lock-in. What took days now takes seconds."
     ],
     scope: [
       "Digital document organization with custom structures",
@@ -95,9 +95,9 @@ const projectDetails = {
       "Firm-owned deployment with enterprise-grade security"
     ],
     solution: [
-      "Built a digital document management system that mirrors the structure of physical minute books while adding search, version control, and instant access—eliminating the limitations of paper entirely.",
+      "Built a digital document management system that mirrors the structure of physical minute books while adding search, version control, and instant access, eliminating the limitations of paper entirely.",
       "Implemented secure client sharing with time-limited access links, allowing firms to provide modern service without compromising security or losing data ownership to third-party vendors.",
-      "Result: Physical storage eliminated, document access went from hours to seconds, and client service modernized overnight—all while maintaining the firm's complete control over their data."
+      "Result: Physical storage eliminated, document access went from hours to seconds, and client service modernized overnight. All while maintaining the firm's complete control over their data."
     ]
   }
 };

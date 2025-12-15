@@ -3,32 +3,32 @@ import SphereScan from "@/components/SphereScan";
 
 const experiences = [
     {
-        role: "Automation Systems Partner",
+        role: "Partner",
         company: "Upskill Condominium Management Ltd.",
         year: "2025 - Now",
     },
         {
-        role: "Automation Systems Partner",
+        role: "Partner",
         company: "Condo Doc Review.",
         year: "2025 - Now",
     },
     {
-        role: "Automation Lead & Systems Architect",
+        role: "Team Lead & Senior Full-Stack Developer",
         company: "Fabled Solutions",
         year: "2023-2025",
     },
     {
-        role: "Business Automation Specialist",
+        role: "Full-Stack Developer",
         company: "Fabled Solutions",
         year: "2019 - 2023",
     },
        {
-        role: "Automation Consultant",
-        company: "Independent",
+        role: "Contract Developer",
+        company: "-",
         year: "2017 - 2022",
     },
     {
-        role: "Process Optimization Analyst",
+        role: "Software QA Analyst",
         company: "DMS Edmonton",
         year: "2016 - 2017",
     },
@@ -70,7 +70,7 @@ export default function About() {
 
                             <p> 
                                 I identify manual bottlenecks in your operations and build automated systems that eliminate them. 
-                                From document processing to inventory management to payment workflows—if it's repetitive and time-consuming, 
+                                From document processing to inventory management to payment workflows. If it's repetitive and time-consuming, 
                                 I can automate it. My clients stop wasting hours on tasks that technology can handle instantly.
                             </p>
                         </div>

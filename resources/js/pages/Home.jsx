@@ -209,7 +209,7 @@ export default function Home() {
                                 </p>
                                 <p className="text-base md:text-xl">
                                     Over the past decade, I've automated document processing for real estate professionals, streamlined 
-                                    inventory operations for logistics companies, and digitized workflows for law firms—saving my clients 
+                                    inventory operations for logistics companies, and digitized workflows for law firms-saving my clients 
                                     thousands of hours and dramatically reducing operational costs.
                                 </p>
                                 <p className="text-base md:text-xl">

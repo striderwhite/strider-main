@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
@@ -25,6 +25,13 @@ export default function Contact() {
     const [error, setError] = useState(false);
     const formRef = useRef(null);
 
+    useEffect(() => {
+        // Initialize EmailJS with public key
+        emailjs.init({
+            publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        });
+    }, []);
+
     return (
         <div className="flex flex-col items-center justify-center px-4 pt-24 lg:pt-32">
             <div className="w-full max-w-[900px]">
@@ -42,11 +49,14 @@ export default function Contact() {
                     validationSchema={ContactSchema}
                     onSubmit={(values, { resetForm }) => {
                         emailjs
-                            .sendForm(
-                                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-                                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-                                formRef.current,
-                                process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+                            .send(
+                                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                                {
+                                    from_name: `${values.firstName} ${values.lastName}`,
+                                    from_email: values.email,
+                                    message: values.message,
+                                }
                             )
                             .then(() => {
                                 resetForm();

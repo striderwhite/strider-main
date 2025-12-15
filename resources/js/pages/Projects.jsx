@@ -6,12 +6,12 @@ const automationOutcomes = [
     id: "condo-doc-review",
     title: "Document Review Automation",
     industry: "Real Estate",
-    problem: "Manual document review taking 6-8 hours per property",
-    outcome: "Reduced to 30 minutes with 98% accuracy",
+    problem: "Manual document review taking hours per property",
+    outcome: "Reduced to minutes with high accuracy",
     metrics: {
-      timeSaved: "90%",
-      costReduction: "$400 per review",
-      accuracy: "98%"
+      timeSaved: "Hours to Minutes",
+      processImprovement: "Automated Extraction",
+      scalability: "Higher Volume"
     },
     image: "/images/projects/condo.jpg"
   },
@@ -19,12 +19,12 @@ const automationOutcomes = [
     id: "logistic-software-solution",
     title: "Inventory Tracking Automation",
     industry: "Logistics & Warehousing",
-    problem: "Spreadsheet chaos causing 15-20 errors per week",
-    outcome: "Eliminated 95% of tracking errors across 3 warehouse locations",
+    problem: "Spreadsheet chaos causing frequent tracking errors",
+    outcome: "Dramatically reduced errors across multiple warehouse locations",
     metrics: {
-      errorReduction: "95%",
-      timeSaved: "25 hrs/week",
-      scalability: "3x locations"
+      errorReduction: "Dramatically Reduced",
+      efficiency: "Real-Time Tracking",
+      scalability: "Multi-Location"
     },
     image: "/images/projects/warehouse.jpg"
   },
@@ -33,11 +33,11 @@ const automationOutcomes = [
     title: "Document Management Automation",
     industry: "Legal Services",
     problem: "Physical file cabinets limiting accessibility and client service",
-    outcome: "Instant digital access with secure client sharing in seconds",
+    outcome: "Instant digital access with secure client sharing",
     metrics: {
       accessSpeed: "Instant",
-      storageEliminated: "12 filing cabinets",
-      clientSatisfaction: "40% increase"
+      storageType: "Fully Digital",
+      clientExperience: "Modernized"
     },
     image: "/images/projects/law.jpg"
   }

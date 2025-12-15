@@ -18,7 +18,7 @@
 
     <meta
     name="description"
-    content="Business process automation that saves time and cuts costs. I eliminate tedious manual work by building systems that automate repetitive tasks, streamline operations, and accelerate growth—without expensive agency fees."
+    content="Business process automation that saves time and cuts costs. I eliminate tedious manual work by building systems that automate repetitive tasks, streamline operations, and accelerate growth without expensive agency fees."
     />
 
     <meta name="robots" content="index,follow" />
