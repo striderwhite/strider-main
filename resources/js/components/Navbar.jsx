@@ -27,7 +27,7 @@ const ProjectsDropdown = ({ isOpen, onMouseEnter, onMouseLeave }) => {
                         to="/projects/dsllp-minute-book"
                         className="text-slate-300 lg:text-5xl hover:text-primary transition"
                     >
-                        DSLLP Minute Book (Coming Soon)
+                        DSLLP Minute Book
                     </Link>
                     <Link
                         to="/projects/logistic-software-solution"
@@ -197,7 +197,7 @@ export default function Navbar() {
                                         Condo Doc Review
                                     </Link>
                                     <Link to="/projects/dsllp-minute-book" className="py-1 text-lg text-slate-300">
-                                        DSLLP Minute Book (Coming Soon)
+                                        DSLLP Minute Book 
                                     </Link>
                                     <Link to="/projects/logistic-software-solution" className="py-1 text-lg text-slate-300">
                                          Logistic Software Solution

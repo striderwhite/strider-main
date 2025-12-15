@@ -13,7 +13,7 @@ const projects = [
         title: "Condo Doc Review",
         subtitle:
             "System that analyses condominium corporations and produces a risk assessment reports for buyers, underwriters, and other stakeholders.",
-        image: "/images/projects/condo-doc-review.png",
+        image: "/images/projects/condo.jpg",
     },
     {
         id: "logistic-software-solution",
@@ -25,7 +25,7 @@ const projects = [
         id: "dsllp-minute-book",
         title: "DSLLP Minute Book",
         subtitle: "A minute book management system for DSLLP, a law office in Edmonton.",
-        image: "/images/projects/dsllp.png",
+        image: "/images/projects/law.jpg",
     },
 ];
 

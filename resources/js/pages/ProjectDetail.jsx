@@ -3,33 +3,110 @@ import { useParams, Link } from "react-router-dom";
 const projects = [
   {
     id: "condo-doc-review",
-    title: "Condo Doc Review",
-    subtitle: "Automates reporting so your team stops living in spreadsheets.",
-    image: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Condo Doc Review Software",
+    subtitle: "A full-stack document ingestion and review platform built to automate and streamline condominium document analysis.",
+    image: "/images/projects/condo-doc-review.jpg",
     description:
-      "A robust dashboard for operations teams to automate reporting, visualize KPIs, and reduce time spent in spreadsheets."
+      "Condo Doc Review software allows users to upload large volumes of condominium-related documents such as reserve fund studies, budgets, bylaws, financial statements, meeting minutes, and insurance documents and have them automatically processed, categorized, and analyzed. The system uses AI-assisted extraction to identify key facts, risks, and findings while maintaining traceability back to source documents. Structured outputs allow reviewers to quickly understand the financial health, governance structure, liabilities, and operational risks of a condominium corporation without manually reading hundreds or thousands of pages. Designed for professionals who perform high-volume document reviews, the platform dramatically reduces review time, increases consistency, and provides a clear audit trail. Human review workflows can be layered on top for validation, quality control, or regulatory requirements."
   },
   {
     id: "logistic-software-solution",
-    title: "Logistic Software Solution",
-    subtitle: "A self-serve hub that cuts support requests in half.",
-    image: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Logistics Software Platform",
+    subtitle: "A scalable logistics and inventory management system designed to support complex, high-volume operational workflows.",
+    image: "/images/projects/logistic-software-solution.jpg",
     description:
-      "A secure portal for clients to access resources, submit requests, and track project status, reducing support overhead."
+      "The logistics software platform manages inventory, movement, storage, and lifecycle tracking across multiple locations and clients. Built to handle millions of records, it supports real-world operational constraints such as partial movements, mobile interactions, third-party integrations, and exception handling. The system includes a centralized database, web-based administrative tools, and mobile applications to support on-the-ground operations. It integrates with external systems and APIs to synchronize data across business units and partners, reducing manual data entry and improving accuracy. Designed for growth, the platform enables organizations to scale operations without a proportional increase in staffing, providing better visibility, reporting, and control over logistics-intensive processes."
   },
   {
     id: "dsllp-minute-book",
-    title: "DSLLP Minute Book",
-    subtitle: "Rule-based flows that keep every project moving on time.",
-    image: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "DSLLP Digital Minute Book Software",
+    subtitle: "A secure, web-based system designed to replace traditional paper-based corporate minute books with a modern digital platform.",
+    image: "/images/projects/dsllp-minute-book.jpg",
     description:
-      "A flexible workflow engine to automate project steps, assign tasks, and ensure timely delivery for every project."
+      "The DSLLP Digital Minute Book software allows law firms to manage corporate records, parties, and documents in a structured, searchable, and auditable system. It provides staff with internal management tools while offering clients secure, read-only access to their corporate records through time-limited links. The platform supports digital binders with customizable tabs, document upload and tagging, version control, and PDF generation. It is designed as a long-term foundation, with optional modules for e-signatures, internal account summaries, and reminder notices. All data is encrypted in transit and at rest, deployed on firm-owned infrastructure, and built with a clear focus on security, ownership, and maintainability. The system improves internal efficiency, reduces reliance on physical records, and delivers a professional, modern client experience without locking the firm into proprietary vendors."
   }
 ];
+
+const projectImages = {
+  "condo-doc-review": {
+    hero: "/images/projects/condo.jpg",
+    detail: "/images/projects/condo-2.jpg"
+  },
+  "logistic-software-solution": {
+    hero: "/images/projects/warehouse.jpg",
+    detail: "/images/projects/warehouse-2.jpg"
+  },
+  "dsllp-minute-book": {
+    hero: "/images/projects/law.jpg",
+    detail: "/images/projects/law-2.jpg"
+  }
+};
+
+const projectDetails = {
+  "condo-doc-review": {
+    overview: [
+      "A full-stack document ingestion and review platform built to automate and streamline condominium document analysis.",
+      "Condo Doc Review software allows users to upload large volumes of condominium-related documents such as reserve fund studies, budgets, bylaws, financial statements, meeting minutes, and insurance documents and have them automatically processed, categorized, and analyzed.",
+      "Designed for professionals who perform high-volume document reviews, the platform dramatically reduces review time, increases consistency, and provides a clear audit trail. Human review workflows can be layered on top for validation, quality control, or regulatory requirements."
+    ],
+    scope: [
+      "Document ingestion pipeline and processing",
+      "AI-assisted extraction and tagging",
+      "Reviewer UI with traceability to sources",
+      "Validation and human-in-the-loop workflows",
+      "Reporting and export (PDF, structured data)"
+    ],
+    solution: [
+      "We built an extraction-first pipeline that normalizes and indexes large document sets, enabling fast search and structured output generation.",
+      "AI-assisted extraction highlights key facts, risks, and findings while maintaining links back to source pages so reviewers can verify results quickly.",
+      "The result is a faster, more consistent review process with an auditable trail reducing manual reading while preserving human oversight where required."
+    ]
+  },
+  "logistic-software-solution": {
+    overview: [
+      "A scalable logistics and inventory management system designed to support complex, high-volume operational workflows.",
+      "The platform manages inventory, movement, storage, and lifecycle tracking across multiple locations and clients, handling real-world constraints such as partial movements, mobile interactions, third-party integrations, and exception handling.",
+      "Built for growth, the system gives operations teams better visibility, reporting, and control while reducing manual effort and errors."
+    ],
+    scope: [
+      "Centralized inventory and location tracking",
+      "Mobile applications for on-the-ground operations",
+      "Third-party integrations and sync APIs",
+      "Exception handling and audit logs",
+      "Scalable data and reporting infrastructure"
+    ],
+    solution: [
+      "We designed a centralized data model with event-driven updates so mobile clients and integrations stay in sync without blocking operations.",
+      "Optimizations for partial movements, batching, and async processing reduced latency and made the system resilient under heavy volume.",
+      "The platform enabled scale with fewer staff by improving accuracy, synchronizing partners, and surfacing actionable operational insights."
+    ]
+  },
+  "dsllp-minute-book": {
+    overview: [
+      "A secure, web-based system designed to replace traditional paper-based corporate minute books with a modern digital platform.",
+      "The DSLLP Digital Minute Book software allows law firms to manage corporate records, parties, and documents in a structured, searchable, and auditable system while providing clients secure, read-only access via time-limited links.",
+      "The product emphasizes security, firm ownership of data, and maintainability enabling firms to move off physical records without relying on proprietary vendors."
+    ],
+    scope: [
+      "Digital binders with customizable tabs",
+      "Document upload, tagging, and version control",
+      "Secure client access (time-limited, read-only links)",
+      "Optional modules: e-signatures, reminders, account summaries",
+      "Deployment on firm-owned infrastructure with encryption"
+    ],
+    solution: [
+      "We implemented a structured, auditable storage model with versioning and PDF generation to replicate the fidelity of physical minute books.",
+      "Access controls and time-limited links provide secure client views while internal tools support staff workflows for updates and governance.",
+      "The platform reduces reliance on physical records, improves internal efficiency, and delivers a modern client experience with a strong focus on security and ownership."
+    ]
+  }
+};
 
 export default function ProjectDetail() {
   const { id } = useParams();
   const project = projects.find((p) => p.id === id);
+
+  const details = projectDetails[id] || { overview: [], scope: [], solution: [] };
 
   if (!project) {
     return (
@@ -54,9 +131,9 @@ export default function ProjectDetail() {
         {/* Top hero image */}
         <div className="w-full">
           <img
-            src={project.image || "https://via.placeholder.com/1600x900"}
+            src={projectImages[id]?.hero || project.image || "https://via.placeholder.com/1600x900"}
             alt={`${project.title} hero`}
-            className="w-full rounded-3xl object-cover"
+            className="w-full max-h-[600px] rounded-3xl object-cover"
           />
         </div>
 
@@ -67,21 +144,11 @@ export default function ProjectDetail() {
             <h2 className="">
               {project.title} Web Application
             </h2>
-            <p className="text-slate-300 text-lg leading-relaxed">
-              Placeholder: Briefly describe the company, who they serve, and what
-              they're known for. Mention the industry, their audience, and the
-              kind of work they do.
-            </p>
-            <p className="text-slate-300 text-lg leading-relaxed">
-              Placeholder: Explain the core problem this project needed to solve.
-              Focus on the systems, workflows, or experiences that weren&apos;t
-              working and what prompted them to look for a new solution.
-            </p>
-            <p className="text-slate-300 text-lg leading-relaxed">
-              Placeholder: Add a line about why this project was a good fit for
-              you and what made the challenge interesting from a software and
-              product perspective.
-            </p>
+            {details.overview.map((p, idx) => (
+              <p key={idx} className="text-slate-300 text-lg leading-relaxed">
+                {p}
+              </p>
+            ))}
           </div>
 
           {/* Scope card */}
@@ -90,11 +157,9 @@ export default function ProjectDetail() {
               Scope
             </h3>
             <ul className="space-y-2 text-slate-200 text-sm md:text-base">
-              <li>—  Placeholder: Product strategy & discovery</li>
-              <li>—  Placeholder: UX/UI design for web app</li>
-              <li>—  Placeholder: Full-stack application development</li>
-              <li>—  Placeholder: Integrations (payments, auth, internal tools)</li>
-              <li>—  Placeholder: Launch support & ongoing iterations</li>
+              {details.scope.map((s, idx) => (
+                <li key={idx}>{s}</li>
+              ))}
             </ul>
           </aside>
         </section>
@@ -104,30 +169,19 @@ export default function ProjectDetail() {
           <h2 className="text-2xl md:text-3xl font-semibold">
             The Solution
           </h2>
-          <p className="text-slate-300 text-lg leading-relaxed">
-            Placeholder: Describe how you approached the product from a systems
-            and experience standpoint. Mention how the interface, architecture,
-            and integrations all work together to support the client’s goals.
-          </p>
-          <p className="text-slate-300 text-lg leading-relaxed">
-            Placeholder: Highlight specific improvements you made (ex: reducing
-            manual work, centralizing fragmented tools, surfacing better data,
-            or streamlining communication between teams).
-          </p>
-          <p className="text-slate-300 text-lg leading-relaxed">
-            Placeholder: Wrap up with the outcome and what success looks like
-            now — whether that's faster workflows, fewer errors, better insights,
-            or just a noticeably smoother experience for everyone using the
-            product.
-          </p>
+          {details.solution.map((p, idx) => (
+            <p key={idx} className="text-slate-300 text-lg leading-relaxed">
+              {p}
+            </p>
+          ))}
         </section>
 
         {/* Full-width bottom image (longer page image) */}
         <section className="w-full">
           <img
-            src="https://images.unsplash.com/photo-1712640183722-ec59693f7c82?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt={`${project.title} detail layout placeholder`}
-            className="w-full lg:w-[80%] max-h-[800px] mx-auto rounded-3xl shadow-xl border border-slate-800/60 object-cover"
+            src={projectImages[id]?.detail || "https://via.placeholder.com/1600x900"}
+            alt={`${project.title} detail layout`}
+            className="w-full lg:w-[80%] max-h-[600px] mx-auto rounded-3xl shadow-xl border border-slate-800/60 object-cover"
           />
         </section>
 

@@ -71,7 +71,7 @@ export default function Home() {
                 />
                 <div className="flex flex-col md:flex-row justify-between items-start gap-4 md:gap-24 max-w-[1040px] pt-12 md:pt-24">
                     <h3 className="text-center md:text-left md:w-1/2">
-                        Software built for the pace of a modern business — fast,
+                        Software built for the pace of a modern business - fast,
                         future-ready, and tailored to the way you work.
                     </h3>
                     <p className="text-center md:text-left md:w-1/2">
