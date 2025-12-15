@@ -3,8 +3,13 @@ import SphereScan from "@/components/SphereScan";
 
 const experiences = [
     {
-        role: "Head Honcho",
-        company: "Strider White Co.",
+        role: "Partner",
+        company: "Upskill Condominium Management Ltd.",
+        year: "2025 - Now",
+    },
+        {
+        role: "Partner",
+        company: "Condo Doc Review.",
         year: "2025 - Now",
     },
     {
@@ -15,11 +20,16 @@ const experiences = [
     {
         role: "Full-Stack Developer",
         company: "Fabled Solutions",
-        year: "2020 - 2023",
+        year: "2019 - 2023",
+    },
+       {
+        role: "Contract Developer",
+        company: "-",
+        year: "2017 - 2022",
     },
     {
-        role: "Web Developer",
-        company: "DMX",
+        role: "Software QA Analyst",
+        company: "DMS Edmonton",
         year: "2016 - 2017",
     },
 ];
@@ -154,14 +164,14 @@ export default function About() {
                               "Vue",
                               "MySQL",
                               "PHP",
-                              "TypeScript",
+                              "API development",
+                              "Automation",
                               "Javascript",
-                              "C++",
+                              "ASM/C/C++",
                               "C#",
                               "AWS",
-                              "Stripe Integrations",
-                              "OCR",
-                              "AI"
+                              "Stripe",
+                              "AI, LLMs, and OCR",
                           ].map((skill) => (
                             <span
                             key={skill}

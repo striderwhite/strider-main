@@ -12,20 +12,20 @@ const projects = [
         id: "condo-doc-review",
         title: "Condo Doc Review",
         subtitle:
-            "Software that creates custom condo doc reports for clients.",
-        image: "/images/profile-main.jpg",
+            "System that analyses condominium corporations and produces a risk assessment reports for buyers, underwriters, and other stakeholders.",
+        image: "/images/projects/condo-doc-review.png",
     },
     {
         id: "logistic-software-solution",
         title: "Logistic Software Solution",
-        subtitle: "Insert quick explanation here.",
-        image: "/images/projects/workflow-engine.jpg",
+        subtitle: "Full mobile and web logistics management system for tire storage warehouses.",
+        image: "/images/projects/warehouse.jpg",
     },
     {
         id: "dsllp-minute-book",
-        title: "DSLLP Minute Book (Coming Soon)",
-        subtitle: "Insert quick explanation here.",
-        image: "/images/projects/client-portal.jpg",
+        title: "DSLLP Minute Book",
+        subtitle: "A minute book management system for DSLLP, a law office in Edmonton.",
+        image: "/images/projects/dsllp.png",
     },
 ];
 
