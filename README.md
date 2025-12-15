@@ -71,7 +71,7 @@ sail composer require package-name
 ### Available Services
 
 The Docker environment includes:
-- **Laravel App** (PHP 8.4) - http://local.strider.test
+- **Laravel App** (PHP 8.1) - http://local.strider.test
 - **MySQL 8.0** - Port 3306
 - **Redis** - Port 6379
 - **Meilisearch** - http://localhost:7700
