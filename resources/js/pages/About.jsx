@@ -3,32 +3,32 @@ import SphereScan from "@/components/SphereScan";
 
 const experiences = [
     {
-        role: "Partner",
+        role: "Automation Systems Partner",
         company: "Upskill Condominium Management Ltd.",
         year: "2025 - Now",
     },
         {
-        role: "Partner",
+        role: "Automation Systems Partner",
         company: "Condo Doc Review.",
         year: "2025 - Now",
     },
     {
-        role: "Team Lead & Senior Full-Stack Developer",
+        role: "Automation Lead & Systems Architect",
         company: "Fabled Solutions",
         year: "2023-2025",
     },
     {
-        role: "Full-Stack Developer",
+        role: "Business Automation Specialist",
         company: "Fabled Solutions",
         year: "2019 - 2023",
     },
        {
-        role: "Contract Developer",
-        company: "-",
+        role: "Automation Consultant",
+        company: "Independent",
         year: "2017 - 2022",
     },
     {
-        role: "Software QA Analyst",
+        role: "Process Optimization Analyst",
         company: "DMS Edmonton",
         year: "2016 - 2017",
     },
@@ -40,10 +40,10 @@ export default function About() {
             <div className="max-w-[1200px] flex flex-col mx-auto text-center md:justify-center min-h-[90vh] md:min-h-screen gap-4 mt-24 md:mt-12">
                 <TextScrambleEffect />
                 <h1>
-                    Pairing <span className="">expert development skills</span>{" "}
-                    with a passion for{" "}
+                    Turning <span className="">hours of tedious work</span>{" "}
+                    into{" "}
                     <span className="font-italic">
-                        simplifying complex problems.
+                        minutes of automated efficiency.
                     </span>
                 </h1>
                 <SphereScan 
@@ -58,18 +58,20 @@ export default function About() {
                 <div className="">
                     {/* Top label */}
                     <p className="text-xs tracking-[0.25em] uppercase mb-6 text-sky-400">
-                        ( Profile )
+                        ( What I Do )
                     </p>
 
                     <div className="grid gap-16 lg:grid-cols-[minmax(0,2fr)_minmax(0,1.4fr)] items-start">
                         {/* Left column: big heading + small text */}
                         <div className="flex flex-col justify-between h-full">
                             <h2 className="mb-6 md:mb-0">
-                                For over 10 years, I've specialized in planning and building software that saves businesses time and money.
+                                For over 10 years, I've automated business operations that were draining time, money, and productivity.
                             </h2>
 
                             <p> 
-                                I'm a fullstack developer and team lead with years of experience delivering high-performance web applications, APIs, and custom data systems. I specialize in end-to-end development, from advanced data modeling and backend architecture to modern UIs and cross-platform deployment.
+                                I identify manual bottlenecks in your operations and build automated systems that eliminate them. 
+                                From document processing to inventory management to payment workflows—if it's repetitive and time-consuming, 
+                                I can automate it. My clients stop wasting hours on tasks that technology can handle instantly.
                             </p>
                         </div>
 
@@ -96,16 +98,14 @@ export default function About() {
                     <div>
                         {/* Top label */}
                         <p className="text-xs tracking-[0.25em] uppercase mb-6 text-sky-400">
-                            ( About )
+                            ( Track Record )
                         </p>
 
-                        <h2 className="mb-6">My Experience</h2>
+                        <h2 className="mb-6">Business Impact</h2>
 
                         <p className="text-sm md:text-base text-slate-500 max-w-md md:mb-10">
-                            Throughout my career I've had the privilege of
-                            working with teams across different industries,
-                            helping them ship reliable products and streamline
-                            the way they work.
+                            I've helped businesses across real estate, logistics, legal services, and technology eliminate 
+                            manual work and accelerate their operations through intelligent automation.
                         </p>
                     </div>
 
@@ -150,39 +150,64 @@ export default function About() {
                       <div className="w-full lg:max-w-[400px]">
                           {/* Top label */}
                           <p className="text-xs tracking-[0.25em] uppercase mb-6 text-sky-400">
-                              ( About )
+                              ( What I Automate )
                           </p>
-                          <h2 className="mb-6">My Skillset</h2>
+                          <h2 className="mb-6">Industries & Processes</h2>
                           <p className="text-sm md:text-base text-slate-500 max-w-lg md:mb-10">
-                              I am always striving to perfect the skills that I already have, while growing new ones to better serve my clients and their needs.
+                              Every business has unique bottlenecks. I've automated operations across these industries and processes, 
+                              delivering measurable time savings and cost reductions.
                           </p>
                       </div>
                       {/* RIGHT SIDE – PILLS */}
-                      <div className="w-full lg:w-1/2 flex flex-wrap gap-4">
-                          {[
-                              "Laravel",
-                              "Vue",
-                              "MySQL",
-                              "PHP",
-                              "API development",
-                              "Automation",
-                              "Javascript",
-                              "ASM/C/C++",
-                              "C#",
-                              "AWS",
-                              "Stripe",
-                              "AI, LLMs, and OCR",
-                          ].map((skill) => (
-                            <span
-                            key={skill}
-                            className="inline-flex items-center px-5 h-8 rounded-full transition-all duration-300
-                                        bg-sky-900/80 text-sky-100 cursor-pointer text-base font-semibold border border-sky-700/40
-                                        shadow-[0_0_10px_rgba(56,189,248,0.25)]
-                                        hover:shadow-[0_0_18px_rgba(56,189,248,0.55)] hover:border-sky-400"
-                            >
-                            {skill}
-                            </span>
-                          ))}
+                      <div className="w-full lg:w-1/2 flex flex-col gap-8">
+                          <div>
+                              <h3 className="text-lg font-semibold mb-4 text-slate-300">Industries Automated</h3>
+                              <div className="flex flex-wrap gap-3">
+                                  {[
+                                      "Real Estate & Property",
+                                      "Legal Services",
+                                      "Logistics & Warehousing",
+                                      "Financial Services",
+                                      "Healthcare Admin",
+                                      "E-commerce Operations",
+                                  ].map((industry) => (
+                                      <span
+                                      key={industry}
+                                      className="inline-flex items-center px-4 py-2 rounded-full transition-all duration-300
+                                                  bg-sky-900/40 text-sky-200 text-sm font-medium border border-sky-700/50
+                                                  hover:bg-sky-900/60 hover:border-sky-500"
+                                      >
+                                      {industry}
+                                      </span>
+                                  ))}
+                              </div>
+                          </div>
+                          <div>
+                              <h3 className="text-lg font-semibold mb-4 text-slate-300">Processes We Automate</h3>
+                              <div className="flex flex-wrap gap-3">
+                                  {[
+                                      "Document Processing",
+                                      "Data Entry Elimination",
+                                      "Inventory Tracking",
+                                      "Payment Collection",
+                                      "Report Generation",
+                                      "Email Workflows",
+                                      "Customer Onboarding",
+                                      "Invoice Processing",
+                                      "Appointment Scheduling",
+                                      "Compliance & Audits",
+                                  ].map((process) => (
+                                      <span
+                                      key={process}
+                                      className="inline-flex items-center px-4 py-2 rounded-full transition-all duration-300
+                                                  bg-slate-800/60 text-slate-300 text-sm font-medium border border-slate-700
+                                                  hover:bg-slate-800 hover:border-sky-500"
+                                      >
+                                      {process}
+                                      </span>
+                                  ))}
+                              </div>
+                          </div>
                       </div>
                     </div>
                 </section>

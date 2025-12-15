@@ -69,7 +69,7 @@ class TextScramble {
 }
 
 const defaultPhrases = [
-  "If it exists,",
+  "If it's repetitive,",
   "automate it.",
 ];
 

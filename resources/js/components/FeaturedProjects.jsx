@@ -12,19 +12,19 @@ const projects = [
         id: "condo-doc-review",
         title: "Condo Doc Review",
         subtitle:
-            "System that analyses condominium corporations and produces a risk assessment reports for buyers, underwriters, and other stakeholders.",
+            "Automated document analysis system that cuts review time from 6+ hours to 30 minutes while improving accuracy and consistency.",
         image: "/images/projects/condo.jpg",
     },
     {
         id: "logistic-software-solution",
-        title: "Logistic Software Solution",
-        subtitle: "Full mobile and web logistics management system for tire storage warehouses.",
+        title: "Logistics Automation System",
+        subtitle: "Inventory tracking system that eliminated manual spreadsheets and reduced tracking errors by 95% across multiple warehouse locations.",
         image: "/images/projects/warehouse.jpg",
     },
     {
         id: "dsllp-minute-book",
-        title: "DSLLP Minute Book",
-        subtitle: "A minute book management system for DSLLP, a law office in Edmonton.",
+        title: "Digital Minute Book System",
+        subtitle: "Automated document management that replaced physical file cabinets, enabling instant access and secure client sharing in seconds.",
         image: "/images/projects/law.jpg",
     },
 ];

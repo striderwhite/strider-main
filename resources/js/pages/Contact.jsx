@@ -29,11 +29,11 @@ export default function Contact() {
         <div className="flex flex-col items-center justify-center px-4 pt-24 lg:pt-32">
             <div className="w-full max-w-[900px]">
                 <h1 className="mb-2 md:mb-4 text-3xl md:text-4xl max-w-2xl">
-                    Would your business benefit from a custom software solution?
+                    Ready to eliminate tedious work and accelerate your operations?
                 </h1>
                 <h1 className="mb-12 text-3xl md:text-4xl bg-gradient-to-r from-[#4f8df0] to-[#5cd4ec] bg-clip-text text-transparent">
                                      
-                        Let's chat.
+                        Let's automate it.
                  
                 </h1>
 

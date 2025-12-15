@@ -70,10 +70,10 @@ export default function Footer() {
                     </div>
                     <div className="max-w-3xl px-4">
                         <h2 className="text-3xl md:text-4xl font-semibold">
-                            Let's bring your ideas to life.
+                            Stop wasting time. Start automating.
                         </h2>
                         <Button variant="secondary" className="mt-6" link="/contact">
-                            Start a Project
+                            Automate Your Business
                         </Button>
                     </div>
                 </>

@@ -18,11 +18,11 @@
 
     <meta
     name="description"
-    content="Enterprise-quality custom software development, AI automation, and systems integration. Nearly a decade of experience building scalable solutions at competitive rates—no boutique agency markup."
+    content="Business process automation that saves time and cuts costs. I eliminate tedious manual work by building systems that automate repetitive tasks, streamline operations, and accelerate growth—without expensive agency fees."
     />
 
     <meta name="robots" content="index,follow" />
-    <title>Custom Software Development | Strider White</title>
+    <title>Business Process Automation | Strider White</title>
       <!-- Vite React entry -->
       @viteReactRefresh
       @vite('resources/js/app.jsx')
